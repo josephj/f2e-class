@@ -1,0 +1,30 @@
+body {
+    padding: 10px;
+}
+.mod-form h1, .mod-form label {
+    font-weight: bold;
+    font-family: Calibri;
+}
+.mod-form h1 {
+    font-size: 123.1%;
+    margin: 10px 0;
+}
+.mod-form label {
+    display: inline-block;
+    padding-right: 10px;
+    width: 50px;
+    text-align: right;
+}
+.mod-form textarea, input[type=text] {
+    padding: 3px 2px;
+    width: 300px;
+}
+.mod-form textarea {
+    height: 80px;
+}
+.mod-form .row {
+    margin: 10px 0;
+}
+.mod-form .row * {
+    vertical-align: middle;
+}

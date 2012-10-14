@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Flickr - 存檔表單</title>
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.2/build/cssreset/reset-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.2/build/cssfonts/fonts-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.2/build/cssbutton/cssbutton.css">
+<link rel="stylesheet" href="_mod_form.css">
+</head>
+<body>
+    <!-- #save-form (start) -->
+    <div id="save-form" class="mod-form">
+        <div class="mod-content">
+            <div class="hd">
+                <h1>Flickr - 存檔表單</h1>
+            </div>
+            <div class="bd">
+                <form method="post" action="/service/?method=saveURL">
+                    <div class="row row-main">
+                        <label>網址</label>
+                        <input type="text" name="url" value="" placeholder="請輸入圖檔網址">
+                    </div>
+                    <div class="row">
+                        <label>標題</label>
+                        <input type="text" name="title" value="" placeholder="請輸入照片標題">
+                    </div>
+                    <div class="row">
+                        <label>描述</label>
+                        <textarea name="description" value="" placeholder="請輸入照片描述"></textarea>
+                    </div>
+                    <div class="row">
+                        <label>標籤</label>
+                        <input type="text" name="tags" value="" placeholder="請輸入相關標籤（以逗號分隔）">
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="將檔案存到 Flickr" class="yui3-button">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- #save-form (end) -->
+</body>
+</html>

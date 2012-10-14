@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="josephj">
+<meta name="created" content="2012-10-10">
+<title></title>
+</head>
+<body>
+    <div id="article">
+        <h1>新店市好吃的餐廳</h1>
+        <ul class="restaurant">
+            <li>可愛村便當：台北縣新店市大豐街8號</li>
+            <li>阿輝現炒黃牛肉：台北縣新店市中興路三段225號</li>
+            <li>黑人牛肉麵：台北縣新店市中興路三段176號</li>
+            <li>蘇杭：台北縣新店市民權路25號2F</li>
+            <li>王家包子：台北縣新店市國校路25號之1</li>
+            <li>辣。四川成都小炒：台北縣新店市吉安路2-1號</li>
+            <li>山東餃子館：台北縣新店市中央路133巷19號1樓</li>
+            <li>樂陶然健康小火鍋：台北縣新店市中央五街2號</li>
+            <li>六六火鍋：台北縣新店市中央路89號</li>
+            <li>龍門客棧：台北縣新店市中央路98號之1</li>
+            <li>麵對麵：台北縣新店市中央路33號</li>
+        </ul>
+    </div>
+    <script>
+    var listNode = document.getElementsByClassName("restaurant")[0];
+    var firstNode = document.getElementsByTagName("li")[0];
+
+    // 2 秒後執行
+    setTimeout(function () {
+        // 移除第一個子節點
+        listNode.removeChild(firstNode);
+    }, 2000);
+
+    // 5 秒後執行
+    setTimeout(function () {
+        // 增加一個新節點
+        var newNode = document.createElement("li");
+        newNode.innerHTML = "啊嗚開的店：台北縣新店市阿嗚路";
+        listNode.appendChild(newNode);
+    }, 5000);
+    </script>
+</body>
+</html>

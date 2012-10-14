@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="josephj">
+<meta name="created" content="2012-10-10">
+<title>JavaScript - foreach</title>
+</head>
+<body>
+    <script>
+    // Step 1 - 準備好學生的資料
+    var students = {
+        knock: {
+            gender: "male",
+            position: "manager"
+        },
+        allen: {
+            gender: "male",
+            position: "engineer"
+        }
+    };
+
+    // Step 2 - 準備一個變數用來放置最後要輸出的
+    //          想要顯示成 "學生名字1, 學生名字2, ..."
+    var nameList = "";
+
+    for (var i in students) {
+
+        // Step 3 - 學生的名字就是 i, 要用 + 這個 Operator 將所有名字串起來
+
+    }
+
+    // Step 4 - 顯示學生名稱列表
+    alert(nameList);
+
+    </script>
+</body>
+</html>

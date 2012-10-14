@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="josephj">
+<meta name="created" content="2012-10-10">
+<title></title>
+</head>
+<body>
+    <div id="article">
+        <h1>新店市好吃的餐廳</h1>
+        <ul class="restaurant">
+            <li>可愛村便當：台北縣新店市大豐街8號</li>
+            <li>阿輝現炒黃牛肉：台北縣新店市中興路三段225號</li>
+            <li>黑人牛肉麵：台北縣新店市中興路三段176號</li>
+            <li>蘇杭：台北縣新店市民權路25號2F</li>
+            <li>王家包子：台北縣新店市國校路25號之1</li>
+            <li>辣。四川成都小炒：台北縣新店市吉安路2-1號</li>
+            <li>山東餃子館：台北縣新店市中央路133巷19號1樓</li>
+            <li>樂陶然健康小火鍋：台北縣新店市中央五街2號</li>
+            <li>六六火鍋：台北縣新店市中央路89號</li>
+            <li>龍門客棧：台北縣新店市中央路98號之1</li>
+            <li>麵對麵：台北縣新店市中央路33號</li>
+        </ul>
+    </div>
+    <script>
+    var title = document.getElementsByTagName("h1")[0];
+
+    // 用 innerHTML 取得 h1 的內容
+    console.log("h1 的內容為: " + title.innerHTML);
+
+    // 直接改寫頁面上的值
+    title.innerHTML = "新北市新店區好吃的餐廳";
+
+    // 用 nodeName 取得 .restaurant 的標籤名稱
+    var list = document.getElementsByClassName("restaurant")[0];
+    console.log(".restaurant 的標籤為: " + list.nodeName);
+
+    // 用 style 改變 list 的樣式
+    list.style.border = "solid 5px #000";
+    list.style.background = "yellow";
+    list.style.color = "blue";
+    console.log("顏色設定完畢！");
+
+    // 用 parentNode 取得 list 的母節點
+    console.log("list 的母節點為: " + list.parentNode);
+
+    // 用 childNodes 取得 list 的第 6 個子節點
+    var currentNode = list.childNodes[5];
+    console.log("list 的第 6 個子節點為: " + currentNode.innerHTML);
+
+    // 用 nextSibling 取得
+    console.log(currentNode.nextSibling);
+    console.log(currentNode.previousSibling);
+    </script>
+</body>
+</html>

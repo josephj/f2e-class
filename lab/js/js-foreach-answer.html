@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="josephj">
+<meta name="created" content="2012-10-10">
+<title>JavaScript - foreach</title>
+</head>
+<body>
+    <script>
+    var students = {
+        knock: {
+            gender: "male",
+            position: "manager"
+        },
+        allen: {
+            gender: "male",
+            position: "engineer"
+        }
+    };
+    var nameList = "";
+    for (var i in students) {
+        nameList = nameList + i + ", ";
+    }
+    alert(nameList);
+    </script>
+</body>
+</html>
