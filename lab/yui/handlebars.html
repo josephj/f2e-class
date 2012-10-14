@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>YUI - JSONP</title>
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.5.1/build/cssreset/reset-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.5.1/build/cssfonts/fonts-min.css">
+<style type="text/css">
+#photo {
+    margin-bottom:10px;
+}
+#photo h2 {
+    margin-bottom:10px;
+    font-weight:bold;
+    font-size:123.1%;
+}
+#photo ul {
+    zoom:1;
+}
+#photo ul:after {
+    content:'';
+    display:block;
+    clear:both;
+}
+#photo li {
+    float:left;
+    margin:0 5px 5px 0;
+}
+</style>
+<script type="text/javascript" src="http://yui.yahooapis.com/3.5.1/build/yui/yui-min.js"></script>
+<script type="text/javascript">
+YUI().use("handlebars", "jsonp", "event-base", "node-base", function (Y) {
+
+    var callback,    // 處理 jsonp 的回傳
+        handleClick, // 處理 click 的事件
+        template,
+        output;
+
+    // JSONP 的回傳事件函式
+    callback = function (data) {
+        var module   = Y.one("#photo"),
+            bodyNode = module.one(".bd"),
+            html;
+
+        // Step 4. 將資料帶入 output 函式、變成要輸出的 HTML
+        // html =
+
+        bodyNode.setContent(html);
+    };
+
+    handleClick = function (e) {
+        e.preventDefault();
+        var tag = Y.one("input[name=tag]").get("value");
+        var url = [
+            "http://api.flickr.com/services/feeds/photos_public.gne",
+            "?tags=" + encodeURIComponent(tag),
+            "&lang=en-us&format=json&jsoncallback={callback}"
+        ].join("");
+        Y.jsonp(url, callback);
+    };
+
+    // Step 2. 取得樣板中的 HTML
+    // template =
+
+    // Step 3. 將樣板 compile 成 output 函式供後續使用
+    // output =
+
+    Y.one(".view-link").on("click", handleClick);
+});
+</script>
+</head>
+<body>
+    <div id="photo">
+        <div class="hd">
+            <h2>相關照片</h2>
+        </div>
+        <div class="bd">
+            <input type="text" name="tag" value="miiiCasa">
+            <a href="http://www.flickr.com/photos/tags/nctu/interesting/" class="view-link">觀看照片</a>
+        </div>
+    </div>
+
+    <!-- 目的：用 JavaScript 組 HTML 缺點很多，改用 Handlebars 樣板引擎！ -->
+    <!-- Step 1. 撰寫樣板 -->
+    <script id="template-photo-list" type="text/x-handlebars-template">
+    <ul class="clearfix">
+        {{#items}}
+        <li>
+            <a href="{{media.m}}" title="{{title}}">
+                <img src="{{media.m}}">
+            </a>
+        </li>
+        {{/items}}
+    </ul>
+    </script>
+
+</body>
+</html>

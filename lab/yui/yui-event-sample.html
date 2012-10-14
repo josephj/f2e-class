@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="created" content="2012-06-25">
+<title>YUI Event Basic</title>
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.5.1/build/cssreset/reset-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.5.1/build/cssfonts/fonts-min.css">
+<script type="text/javascript" src="http://yui.yahooapis.com/3.5.1/build/yui/yui-min.js"></script>
+<style type="text/css">
+/* 已經定義了一個 .highlighted 的屬性 */
+.highlighted {
+    background: yellow;
+}
+</style>
+</head>
+<body>
+     <div id="article">
+        <h1>新店市好吃的餐廳</h1>
+        <ul class="restaurant">
+            <li>可愛村便當：台北縣新店市大豐街8號</li>
+            <li>阿輝現炒黃牛肉：台北縣新店市中興路三段225號</li>
+            <li>黑人牛肉麵：台北縣新店市中興路三段176號</li>
+            <li>蘇杭：台北縣新店市民權路25號2F</li>
+            <li>王家包子：台北縣新店市國校路25號之1</li>
+            <li>辣。四川成都小炒：台北縣新店市吉安路2-1號</li>
+            <li>山東餃子館：台北縣新店市中央路133巷19號1樓</li>
+            <li>樂陶然健康小火鍋：台北縣新店市中央五街2號</li>
+            <li>六六火鍋：台北縣新店市中央路89號</li>
+            <li>龍門客棧：台北縣新店市中央路98號之1</li>
+            <li>麵對麵：台北縣新店市中央路33號</li>
+        </ul>
+    </div>
+    <script>
+    // Step 1 - 我們會操作到節點 (node)、以及綁事件 (event)
+    // 所以要使用 (use) "node" 與 "event" 模組
+    // YUI().use("模組1", "模組2", ... function (Y) {});
+    YUI().use("node", "event", function (Y) {
+        // Step 2 - 取得頁面上所有的 li 節點可以用 Y.all("li");
+        var items = Y.all("li");
+        // Step 4 - 撰寫指定的處理函式
+        var handleClick = function (e) {
+            // Step 5. 取得目前觸發的元素為 e.target
+            var item = e.target;
+            // Step 6 採用 addClass() 方法加上 highlighted className
+            item.toggleClass("highlighted");
+        };
+        // Step 3 - 要綁上一個 click 的事件，可以用 Y.all("li").on("click", 指定的處理函式)
+        items.on("click", handleClick);
+    });
+    </script>
+</body>
+</html>

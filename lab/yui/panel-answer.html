@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>YUI Panel</title>
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.2/build/cssreset/reset-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.2/build/cssreset/reset-min.css">
+<style type="text/css">
+html, body {
+    background: #f8f8f8 url(/assets/noise.png);
+}
+#photo {
+    width: 400px;
+    text-align: center;
+    margin: 100px auto 0;
+}
+.yui3-widget-bd {
+    text-align: center;
+}
+</style>
+<script type="text/javascript" src="http://yui.yahooapis.com/3.7.2/build/yui/yui-min.js"></script>
+<script type="text/javascript">
+YUI({skin: "night"}).use("panel", function (Y) {
+
+    // Step 3 - 新增 Y.Panel 的物件
+    //          置中 centered 預設為 true
+    //          預先產生 rendered 預設為 true
+    //          顯示 visible 預設為 false
+    //          寬高 720 * 550px
+    var panel = new Y.Panel({
+        centered: true,
+        render: true,
+        visible: false,
+        width: "720px",
+        height: "550px"
+    });
+
+    // Step 2 - 點選了 button 需要設定 Panel 的內容
+    //          請設定 bodyContent 這個屬性 ex. panel.set("bodyContent", 圖片 HTML);
+    //          接著呼叫 panel.show(); 來顯示 Panel
+    var button = Y.one(".photo-link");
+    button.on("click", function (e) {
+        e.preventDefault();
+        var src = e.target.get("href");
+
+        // 設定 bodyContent
+        panel.set("bodyContent", '<img src="' + src + '">');
+
+        // 顯示 panel
+        panel.show();
+    });
+});
+</script>
+</head>
+<!-- Step 1 - 請填寫 "yui3-skin-night" 套用 YUI 的預設樣式 -->
+<body class="yui3-skin-night">
+    <!-- 目標： 點選按鈕可以觀看大圖 -->
+    <div id="photo">
+        <div class="bd">
+            <img src="http://farm9.staticflickr.com/8045/8084882785_6fe439f65c_n.jpg" width="320" height="227" alt="Yahoo! F2E">
+        </div>
+        <div class="ft">
+            <!-- 即使沒有 JavaScript 仍然可以看大圖 -->
+            <a href="http://farm9.staticflickr.com/8045/8084882785_6fe439f65c_z.jpg" class="yui3-button photo-link">點我看大圖</a>
+        </div>
+    </div>
+</body>
+</html>

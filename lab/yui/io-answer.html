@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>YUI IO</title>
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.2/build/cssreset/reset-min.css">
+<style type="text/css">
+html, body {
+    background: #f8f8f8 url(/assets/noise.png);
+}
+#slide {
+    width: 427px;
+    text-align: center;
+    margin: 100px auto 0;
+}
+#slide .bd {
+    width: 429px;
+    height: 357px;
+    overflow: hidden;
+    text-align: center;
+    line-height: 356px;
+    vertical-align: middle;
+    border: solid 1px #000;
+    margin-bottom: 5px;
+}
+</style>
+<script type="text/javascript" src="http://yui.yahooapis.com/3.7.2/build/yui/yui-min.js"></script>
+<script type="text/javascript">
+YUI({skin: "night"}).use("io", "node", "event", "cssbutton", function (Y) {
+    var button = Y.one(".slide-link");
+    button.on("click", function (e) {
+        e.preventDefault();
+
+        // Step 2 - 以 Y.on("io:complete", <函式>); 訂閱完成事件
+        //          並將所得到的 HTML (o.responseText) 以 setHTML 方法寫入 #slide .bd 中
+        Y.on("io:complete", function (id, o) {
+            Y.one("#slide .bd").setHTML(o.responseText);
+        });
+
+        // Step 1 - 以 Y.io(<伺服器URL>); 載入遠端伺服器的檔案。
+        Y.io("io.txt");
+    });
+});
+</script>
+</head>
+<body class="yui3-skin-night">
+    <div id="slide">
+        <div class="bd">
+            <p>投影片未載入</p>
+        </div>
+        <div class="ft">
+            <!-- 目標： 點選按鈕可以從伺服器載入投影片所需 HTML -->
+            <!-- 即使沒有 JavaScript 仍然可以看投影片 -->
+            <a href="https://www.slideshare.net/secret/hIIfIQzqhZcpc" class="yui3-button slide-link">觀看投影片</a>
+        </div>
+    </div>
+</body>
+</html>

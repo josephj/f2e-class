@@ -1,0 +1,9 @@
+<iframe src="https://www.slideshare.net/slideshow/embed_code/14701189?rel=0"
+    width="427" height="356" frameborder="0" marginwidth="0" marginheight="0"
+    scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen>
+</iframe>
+<div style="margin-bottom:5px">
+    <strong>
+        <a href="http://www.slideshare.net/josephj/css-14701189" title="CSS 入門" target="_blank">CSS 入門</a>
+    </strong> from <strong><a href="http://www.slideshare.net/josephj" target="_blank">Joseph Chiang</a></strong>
+</div>
