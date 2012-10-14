@@ -1,0 +1,3 @@
+[submodule "album"]
+	path = album
+	url = git@github.com:josephj/f2e-class-album.git
