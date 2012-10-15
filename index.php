@@ -1,5 +1,5 @@
 <?php include_once "inc/_before_body.php" ?>
-<div id="doc2" class="yui-t5">
+<div id="doc3" class="yui-t5">
     <div id="hd">
 <?php include_once "inc/_masthead.php" ?>
 <?php include_once "inc/_nav.php" ?>

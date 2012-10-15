@@ -1,0 +1,279 @@
+@charset "UTF-8";
+/* line 1, ../sass/_masthead.scss */
+#masthead {
+    padding: 12px 20px;
+    background: url(/assets/bg_masthead.png) 100% 0 no-repeat;
+}
+/* line 4, ../sass/_masthead.scss */
+#masthead .title a {
+    color: #fff;
+}
+
+/* line 2, ../sass/class.scss */
+#doc3 {
+    margin: 0;
+}
+
+/* line 6, ../sass/class.scss */
+a:link, a:visited {
+    color: #00549a;
+    text-decoration: none;
+}
+/* line 10, ../sass/class.scss */
+a:hover {
+    color: #f30;
+    text-decoration: none;
+}
+
+/* 清除 floating */
+/* line 18, ../sass/class.scss */
+.clearfix {
+    zoom: 1;
+}
+/* line 20, ../sass/class.scss */
+.clearfix:after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+/* line 27, ../sass/class.scss */
+#ad {
+    margin-bottom: 10px;
+}
+/* line 29, ../sass/class.scss */
+#ad h2 {
+    color: #ccc;
+    margin-bottom: 5px;
+    text-align: center;
+}
+/* line 34, ../sass/class.scss */
+#ad .ft {
+    text-align: center;
+}
+
+/* line 39, ../sass/class.scss */
+#article {
+    margin-bottom: 10px;
+}
+/* line 41, ../sass/class.scss */
+#article .hd {
+    margin-bottom: 10px;
+}
+/* line 42, ../sass/class.scss */
+#article .hd h2 {
+    font-weight: bold;
+    font-size: 123.1%;
+    float: left;
+}
+/* line 47, ../sass/class.scss */
+#article .hd span {
+    float: right;
+}
+/* line 52, ../sass/class.scss */
+#article .bd {
+    text-align: center;
+}
+/* line 54, ../sass/class.scss */
+#article .bd .empty {
+    color: #000;
+    font-size: 93%;
+    letter-spacing: 1px;
+    padding: 200px 0;
+    text-align: center;
+    border: solid 1px #ccc;
+}
+/* line 62, ../sass/class.scss */
+#article .bd p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+/* line 66, ../sass/class.scss */
+#article .bd blockquote {
+    border: solid 1px #ccc;
+    background: #efefef;
+    font-family: 'Courier New';
+    line-height: 1.5;
+    padding: 10px;
+    margin: 0 20px 10px;
+}
+/* line 75, ../sass/class.scss */
+#article .ft {
+    margin: 30px 20px 10px;
+    text-align: right;
+}
+/* line 78, ../sass/class.scss */
+#article .ft span {
+    background: url(http://l.yimg.com/tw.yimg.com/i/tw/movie/i6/icon_more.gif) left top no-repeat;
+}
+/* line 81, ../sass/class.scss */
+#article .ft a {
+    padding-left: 20px;
+}
+
+/* line 89, ../sass/class.scss */
+#masthead .bd .title {
+    font-size: 197%;
+    font-weight: bold;
+    float: left;
+}
+/* line 94, ../sass/class.scss */
+#masthead .bd img {
+    float: right;
+}
+
+/* line 100, ../sass/class.scss */
+#mastfoot {
+    border-top: solid 1px #ccc;
+    padding: 10px 0;
+}
+/* line 104, ../sass/class.scss */
+#mastfoot .bd .link {
+    float: left;
+}
+/* line 107, ../sass/class.scss */
+#mastfoot .bd .counter {
+    float: right;
+}
+
+/* line 113, ../sass/class.scss */
+#nav {
+    margin-bottom: 10px;
+}
+
+/* line 117, ../sass/class.scss */
+#relate-link {
+    border: 1px solid #d5d5d5;
+    position: relative;
+    margin-bottom: 10px;
+    z-index: 0;
+    zoom: 1;
+}
+/* line 123, ../sass/class.scss */
+#relate-link .mod-content {
+    position: relative;
+    z-index: 2;
+}
+/* line 127, ../sass/class.scss */
+#relate-link .x1, #relate-link .x2 {
+    position: absolute;
+    right: -1px;
+    text-align: left;
+    width: 100%;
+}
+/* line 133, ../sass/class.scss */
+#relate-link .x1, #relate-link .x2, #relate-link .x1a, #relate-link .x2a {
+    background-image: url(http://l.yimg.com/us.js.yimg.com/lib/ks/tw/i8/rc_gray_sprite.gif);
+    background-repeat: no-repeat;
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 5px;
+}
+/* line 141, ../sass/class.scss */
+#relate-link .x1a, #relate-link .x2a {
+    display: block;
+    height: 5px;
+    position: relative;
+    width: 5px;
+}
+/* line 147, ../sass/class.scss */
+#relate-link .x1 {
+    background-position: 100% -10px;
+    top: -1px;
+}
+/* line 151, ../sass/class.scss */
+#relate-link .x1a {
+    background-position: 0 0;
+    left: -2px;
+}
+/* line 155, ../sass/class.scss */
+#relate-link .x2 {
+    position: absolute;
+    background-position: 100% 100%;
+    bottom: -1px;
+    right: -1px;
+    _bottom: -2px;
+}
+/* line 162, ../sass/class.scss */
+#relate-link .x2a {
+    background-position: 0 -5px;
+    left: -2px;
+}
+/* line 166, ../sass/class.scss */
+#relate-link .hd {
+    background: #f2f2f2;
+    margin: 1px;
+    padding: 5px 0 3px 5px;
+}
+/* line 170, ../sass/class.scss */
+#relate-link .hd h2 {
+    font-size: 123.1%;
+    font-weight: bold;
+}
+/* line 176, ../sass/class.scss */
+#relate-link .bd h3 {
+    background: #ffe;
+    color: #999;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+/* line 182, ../sass/class.scss */
+#relate-link .bd ul {
+    margin: 5px 10px 0;
+}
+/* line 184, ../sass/class.scss */
+#relate-link .bd ul li {
+    background: url(http://l.yimg.com/us.js.yimg.com/lib/ks/tw/i8/generic_dot.gif) left center no-repeat;
+    border-bottom: solid 1px #ccc;
+    color: #cccccc;
+    padding-left: 15px;
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+}
+/* line 191, ../sass/class.scss */
+#relate-link .bd ul li span {
+  /*display:none;*/
+}
+/* line 194, ../sass/class.scss */
+#relate-link .bd ul li.last {
+    border: none;
+}
+
+/* line 202, ../sass/class.scss */
+#photo {
+    margin-bottom: 10px;
+}
+/* line 204, ../sass/class.scss */
+#photo .hd {
+    margin-bottom: 10px;
+}
+/* line 207, ../sass/class.scss */
+#photo h2 {
+    font-weight: bold;
+    font-size: 123.1%;
+    float: left;
+}
+/* line 212, ../sass/class.scss */
+#photo span {
+    float: right;
+}
+/* line 216, ../sass/class.scss */
+#photo .bd .empty {
+    color: #000;
+    font-size: 93%;
+    letter-spacing: 1px;
+    padding: 100px 0;
+    text-align: center;
+    border: solid 1px #ccc;
+}
+/* line 224, ../sass/class.scss */
+#photo .bd ul {
+    margin: 0 25px;
+}
+/* line 226, ../sass/class.scss */
+#photo .bd ul li {
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}

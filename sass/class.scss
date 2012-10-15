@@ -1,0 +1,233 @@
+@import "masthead";
+#doc3 {
+    margin: 0;
+}
+a {
+    &:link, &:visited {
+        color: #00549a;
+        text-decoration: none;
+    }
+    &:hover {
+        color: #f30;
+        text-decoration: none;
+    }
+}
+
+/* 清除 floating */
+
+.clearfix {
+    zoom: 1;
+    &:after {
+        clear: both;
+        content: '';
+        display: block;
+    }
+}
+
+#ad {
+    margin-bottom: 10px;
+    h2 {
+        color: #ccc;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    .ft {
+        text-align: center;
+    }
+}
+
+#article {
+    margin-bottom: 10px;
+    .hd {
+        h2 {
+            font-weight: bold;
+            font-size: 123.1%;
+            float: left;
+        }
+        span {
+            float: right;
+        }
+        margin-bottom: 10px;
+    }
+    .bd {
+        text-align: center;
+        .empty {
+            color: #000;
+            font-size: 93%;
+            letter-spacing: 1px;
+            padding: 200px 0;
+            text-align: center;
+            border: solid 1px #ccc;
+        }
+        p {
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        blockquote {
+            border: solid 1px #ccc;
+            background: #efefef;
+            font-family: 'Courier New';
+            line-height: 1.5;
+            padding: 10px;
+            margin: 0 20px 10px;
+        }
+    }
+    .ft {
+        margin: 30px 20px 10px;
+        text-align: right;
+        span {
+            background: url(http://l.yimg.com/tw.yimg.com/i/tw/movie/i6/icon_more.gif) left top no-repeat;
+        }
+        a {
+            padding-left: 20px;
+        }
+    }
+}
+
+#masthead {
+    .bd {
+        .title {
+            font-size: 197%;
+            font-weight: bold;
+            float: left;
+        }
+        img {
+            float: right;
+        }
+    }
+}
+
+#mastfoot {
+    border-top: solid 1px #ccc;
+    padding: 10px 0;
+    .bd {
+        .link {
+            float: left;
+        }
+        .counter {
+            float: right;
+        }
+    }
+}
+
+#nav {
+    margin-bottom: 10px;
+}
+
+#relate-link {
+    border: 1px solid #d5d5d5;
+    position: relative;
+    margin-bottom: 10px;
+    z-index: 0;
+    zoom: 1;
+    .mod-content {
+        position: relative;
+        z-index: 2;
+    }
+    .x1, .x2 {
+        position: absolute;
+        right: -1px;
+        text-align: left;
+        width: 100%;
+    }
+    .x1, .x2, .x1a, .x2a {
+        background-image: url(http://l.yimg.com/us.js.yimg.com/lib/ks/tw/i8/rc_gray_sprite.gif);
+        background-repeat: no-repeat;
+        clear: both;
+        display: block;
+        font-size: 0;
+        height: 5px;
+    }
+    .x1a, .x2a {
+        display: block;
+        height: 5px;
+        position: relative;
+        width: 5px;
+    }
+    .x1 {
+        background-position: 100% -10px;
+        top: -1px;
+    }
+    .x1a {
+        background-position: 0 0;
+        left: -2px;
+    }
+    .x2 {
+        position: absolute;
+        background-position: 100% 100%;
+        bottom: -1px;
+        right: -1px;
+        _bottom: -2px;
+    }
+    .x2a {
+        background-position: 0 -5px;
+        left: -2px;
+    }
+    .hd {
+        background: #f2f2f2;
+        margin: 1px;
+        padding: 5px 0 3px 5px;
+        h2 {
+            font-size: 123.1%;
+            font-weight: bold;
+        }
+    }
+    .bd {
+        h3 {
+            background: #ffe;
+            color: #999;
+            margin-bottom: 5px;
+            padding: 5px;
+        }
+        ul {
+            margin: 5px 10px 0;
+            li {
+                background: url(http://l.yimg.com/us.js.yimg.com/lib/ks/tw/i8/generic_dot.gif) left center no-repeat;
+                border-bottom: solid 1px #ccc;
+                color: #cccccc;
+                padding-left: 15px;
+                padding-bottom: 3px;
+                margin-bottom: 3px;
+                span {
+                    /*display:none;*/
+                }
+                &.last {
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+#photo {
+    margin-bottom: 10px;
+    .hd {
+        margin-bottom: 10px;
+    }
+    h2 {
+        font-weight: bold;
+        font-size: 123.1%;
+        float: left;
+    }
+    span {
+        float: right;
+    }
+    .bd {
+        .empty {
+            color: #000;
+            font-size: 93%;
+            letter-spacing: 1px;
+            padding: 100px 0;
+            text-align: center;
+            border: solid 1px #ccc;
+        }
+        ul {
+            margin: 0 25px;
+            li {
+                float: left;
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
