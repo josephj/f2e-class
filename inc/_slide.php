@@ -1,4 +1,7 @@
-<!-- #slide (start) -->
+<?php
+$embed_url = "https://www.slideshare.net/slideshow/embed_code/14734059?rel=0";
+$site_url = "http://www.slideshare.net/josephj/introduction-14734059";
+?><!-- #slide (start) -->
 <div id="slide">
     <div class="hd clearfix">
         <h2>課程投影片</h2>
@@ -7,8 +10,12 @@
         </span>
     </div>
     <div class="bd">
-        <div>
-            <iframe src="https://www.slideshare.net/slideshow/embed_code/14734059?rel=0" width="597" height="486" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="http://www.slideshare.net/josephj/introduction-14734059" title="前端工程開發實務訓練" target="_blank">前端工程開發實務訓練</a> </strong> from <strong><a href="http://www.slideshare.net/josephj" target="_blank">Joseph Chiang</a></strong> </div>
+        <div class="player">
+            <iframe src="<?php echo $embed_url; ?>" allowfullscreen></iframe>
+            <div class="info">
+                <a href="<?php echo $site_url; ?>" target="_blank" class="site-link">Slide</a>
+                from <a href="http://www.slideshare.net/josephj" target="_blank">Joseph Chiang</a>
+            </div>
         </div>
     </div>
 </div>

@@ -1,0 +1,35 @@
+#slide {
+    margin: 15px 0;
+    .hd {
+        position: absolute;
+        top: -1000em;
+        left: -1000em;
+    }
+    .bd {
+        text-align: center;
+        .player {
+            iframe {
+                width: 597px;
+                height: 486px;
+                border: none;
+                margin: 0;
+                overflow: hidden;
+                border: 1px solid #ccc;
+                margin: 0 0 5px;
+            }
+            .info {
+                margin: 0 0 5px;
+            }
+        }
+    }
+    .ft {
+        margin: 30px 20px 10px;
+        text-align: right;
+        span {
+            background: url(http://l.yimg.com/tw.yimg.com/i/tw/movie/i6/icon_more.gif) left top no-repeat;
+        }
+        a {
+            padding-left: 20px;
+        }
+    }
+}
