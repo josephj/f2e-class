@@ -27,7 +27,7 @@ switch ($method)
         fclose($fp);
         $data = $f->sync_upload("tmp/$filename", $title, $description, $tags, 0, 0, 0);
         $f->photosets_addPhoto($photoset_id, $data);
-        $f->photosets_reoderPhotos($photoset_id, "$data");
+        // $f->photosets_reoderPhotos($photoset_id, "$data");
         $result = json_encode(array("photo_id" => $data));
         break;
     case "upload":
