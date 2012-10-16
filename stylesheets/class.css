@@ -1,11 +1,10 @@
-@charset "UTF-8";
-/* line 1, /var/www/josephj/frontend/class/sass/_masthead.scss */
+/* line 1, ../sass/_masthead.scss */
 #masthead {
+    background: #31033e url(/assets/bg_masthead.png) 100% 0 no-repeat;
     font-family: "微軟正黑體";
     padding: 12px 20px;
-    background: url(/assets/bg_masthead.png) 100% 0 no-repeat;
 }
-/* line 5, /var/www/josephj/frontend/class/sass/_masthead.scss */
+/* line 5, ../sass/_masthead.scss */
 #masthead .title a {
     color: #fff;
 }
