@@ -2,3 +2,4 @@
 node_modules
 .sass-cache
 service/tmp
+npm-debug.log
