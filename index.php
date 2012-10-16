@@ -7,19 +7,7 @@
     <div id="bd">
         <div id="yui-main">
             <div class="yui-b">
-                    <!-- MODULE #article 文章模組 (開始) {{{ -->
-                    <div id="article">
-                        <div class="hd clearfix">
-                            <h2>課程投影片</h2>
-                            <span>
-                                <a href="http://www.flickr.com/photos/tags/yzu/interesting/" class="load-link">載入投影片</a>
-                            </span>
-                        </div>
-                        <div class="bd">
-                            <div class="empty">投影片尚未載入</div>
-                        </div>
-                    </div>
-                    <!-- MODULE #article 文章模組 (結束) }}} -->
+<?php include_once "inc/_slide.php" ?>
                     <!-- MODULE #photo 照片模組 (開始) {{{ -->
                     <div id="photo">
                         <div class="hd clearfix">
