@@ -1,0 +1,59 @@
+#relate-link {
+    margin: 25px 5px 10px 15px;
+    .mod-content {
+        position: relative;
+        background: #fff;
+        @include border-radius(6px);
+        @include box-shadow(0 1px 4px rgba(0, 0, 0, .065));
+        z-index: 2;
+    }
+    .hd {
+        position: absolute;
+        top: -1000em;
+        left: -1000em;
+    }
+    .bd > .yui3-accordion-item:first-child h3 > a {
+        @include border-radius(6px 6px 0 0);
+    }
+    .bd {
+        h3 {
+            a {
+                border: 1px solid #E5E5E5;
+                font-size: 123.1%;
+                font-family: 'PT Sans','DejaVu Sans','Bitstream Vera Sans',Verdana,sans-serif;
+                letter-spacing: 1px;
+                display: block;
+                padding: 8px 14px;
+                margin: 0 0 -1px;
+                &:hover {
+                    color: #369;
+                    background-color: #F7F7F9;
+                }
+            }
+        }
+        ul {
+            border: 1px solid #E5E5E5;
+            margin: 0 0 -1px;
+            padding: 5px 0 0;
+            li {
+                background: url(http://l.yimg.com/us.js.yimg.com/lib/ks/tw/i8/generic_dot.gif) left center no-repeat;
+                color: #cccccc;
+                padding-left: 15px;
+                padding-bottom: 3px;
+                margin-bottom: 3px;
+                span {
+                    /*display:none;*/
+                }
+                &.last {
+                    border: none;
+                }
+            }
+        }
+    }
+}
+.yui3-accordion-item-active .yui3-accordion-item-trigger a {
+    &:link, &:hover {
+        background: #08c !important;
+        color: #fff !important;
+    }
+}

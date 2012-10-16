@@ -3,30 +3,73 @@
     <div class="bd yui3-menu-content">
         <ul>
             <li class="yui3-menuitem yui3-menuitem-active">
-                <a href="/" class="yui3-menuitem-content">首頁</a>
+                <a href="/" class="yui3-menuitem-content">課程首頁</a>
             </li>
             <li>
-                <a href="#forum" class="yui3-menu-label">
+                <a href="#yui" class="yui3-menu-label">
                     <em>YUI 相關資源</em>
                 </a>
-                <div id="forum" class="yui3-menu yui3-menu-hidden">
+                <div id="yui" class="yui3-menu yui3-menu-hidden">
                     <div class="yui3-menu-content">
                         <ul>
                             <li class="yui3-menuitem">
-                                <a href="#ydn" class="yui3-menuitem-content">YDN 討論區</a>
+                                <a href="http://yuilibrary.com/yui/docs/guides/" class="yui3-menuitem-content" target="_blank">使用說明</a>
                             </li>
                             <li class="yui3-menuitem">
-                                <a href="#yui" class="yui3-menuitem-content">YUI 討論區</a>
+                                <a href="http://yuiblog.com" class="yui3-menuitem-content" target="_blank">部落格</a>
+                            </li>
+                            <li class="yui3-menuitem">
+                                <a href="http://yuilibrary.com/forum/" class="yui3-menuitem-content" target="_blank">討論區</a>
+                            </li>
+                            <li class="yui3-menuitem">
+                                <a href="http://jshirley.github.com/bootstrap/index.html" class="yui3-menuitem-content" target="_blank">Bootstrap</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </li>
-            <li class="yui3-menuitem">
-                <a href="#album" class="yui3-menuitem-content">相簿</a>
+            <li>
+                <a href="#album" class="yui3-menu-label">
+                    <em>實作相簿</em>
+                </a>
+                <div id="album" class="yui3-menu yui3-menu-hidden">
+                    <div class="yui3-menu-content">
+                        <ul>
+                            <li class="yui3-menuitem">
+                                <a href="/album" class="yui3-menuitem-content" target="_blank">照片交流區</a>
+                            </li>
+                            <li class="yui3-menuitem">
+                                <a href="http://www.flickr.com/photos/88526344@N03/" class="yui3-menuitem-content" target="_blank">Flickr 儲存空間</a>
+                            </li>
+                            <li class="yui3-menuitem">
+                                <a href='javascript:(function(){var el=document.createElement("script");el.src="http://f2eclass.com/lab/flickr/bookmarklet.js";document.getElementsByTagName("head")[0].appendChild(el);}());")")})' class="yui3-menuitem-content">JavaScript 書籤</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </li>
-            <li class="yui3-menuitem">
-                <a href="#about" class="yui3-menuitem-content">關於</a>
+            <li>
+                <a href="#resource" class="yui3-menu-label">
+                    <em>講者連結</em>
+                </a>
+                <div id="resource" class="yui3-menu yui3-menu-hidden">
+                    <div class="yui3-menu-content">
+                        <ul>
+                            <li class="yui3-menuitem">
+                                <a href="http://josephj.com" class="yui3-menuitem-content" target="_blank">部落格</a>
+                            </li>
+                            <li class="yui3-menuitem">
+                                <a href="http://www.slideshare.net/josephj" class="yui3-menuitem-content" target="_blank">Slideshare</a>
+                            </li>
+                            <li class="yui3-menuitem">
+                                <a href="https://speakerdeck.com/u/josephj" class="yui3-menuitem-content" target="_blank">Speakerdeck</a>
+                            </li>
+                            <li class="yui3-menuitem">
+                                <a href="http://github.com/josephj" class="yui3-menuitem-content" target="_blank">Github</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </li>
         </ul>
     </div>

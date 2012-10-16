@@ -17,6 +17,6 @@ fs.readFile("./html.html", function (err, html) {
         response.end();
     }).listen(1337);
 
-    console.log("Server running at http://node.f2eclass.com");
+    console.log("Server running at http://f2eclass.com:1337");
 });
 

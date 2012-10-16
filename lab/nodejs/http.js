@@ -6,5 +6,4 @@ http.createServer(function (req, res) {
     res.end();
 }).listen(1337);
 
-console.log("Server running at http://node.f2eclass.com");
-// console.log("Server running at http://localhost:1337");
+console.log("Server running at http://f2eclass.com:1337");

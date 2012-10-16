@@ -1,0 +1,38 @@
+.yui3-accordion {
+    position: relative;
+    zoom: 1;
+    .yui3-accordion-item {
+        display: block;
+        .yui3-accordion-item-bd {
+            height: 0;
+            _height: 1px;
+            *height: 1px;
+            overflow: hidden;
+            zoom: 1;
+        }
+    }
+    .yui3-accordion-item-active .yui3-accordion-item-bd {
+        height: auto;
+    }
+}
+
+.yui3-skin-sam .yui3-accordion {
+    text-align: left;
+    .yui3-accordion-item {
+        display: block;
+        .yui3-accordion-item-hd {
+            line-height: 2;
+            *line-height: 1.9;
+        }
+        .yui3-accordion-item-bd {
+            display: block;
+        }
+    }
+    .yui3-accordion-item-active .yui3-accordion-item-trigger a {
+        &:link, &:hover {
+            background: #08c !important;
+            color: #fff !important;
+        }
+    }
+}
+
