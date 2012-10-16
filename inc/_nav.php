@@ -6,6 +6,29 @@
                 <a href="/" class="yui3-menuitem-content">課程首頁</a>
             </li>
             <li>
+                <a href="#w3school" class="yui3-menu-label">
+                    <em>W3School 相關資源</em>
+                </a>
+                <div id="w3school" class="yui3-menu yui3-menu-hidden">
+                    <div class="yui3-menu-content">
+                        <ul>
+                            <li class="yui3-menuitem">
+                                <a href="http://www.w3schools.com/tags/default.asp" class="yui3-menuitem-content" target="_blank">HTML 標籤列表</a>
+                            </li>
+                            <li class="yui3-menuitem">
+                                <a href="http://www.w3schools.com/cssref/default.asp" class="yui3-menuitem-content" target="_blank">CSS 屬性列表</a>
+                            </li>
+                            <li class="yui3-menuitem">
+                                <a href="http://www.w3schools.com/jsref/default.asp" class="yui3-menuitem-content" target="_blank">JavaScript 物件列表</a>
+                            </li>
+                            <li class="yui3-menuitem">
+                                <a href="http://www.w3schools.com/php/default.asp" class="yui3-menuitem-content" target="_blank">PHP 入門</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
                 <a href="#yui" class="yui3-menu-label">
                     <em>YUI 相關資源</em>
                 </a>

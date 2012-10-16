@@ -34,9 +34,26 @@ $data = array(
             "answer" => FALSE,
         ),
         array(
-            "text" => "HTML 模組",
+            "text" => "練習：將一篇文章套版",
+            "href" => "lab/html/history.html",
+        ),
+        array(
+            "text" => "練習：製作一個 HTML 模組",
             "href" => "lab/html/module.html",
         ),
+        array(
+            "text" => "練習：撰寫相簿存檔表單",
+            "href" => "lab/html/save_form.php",
+        ),
+        array(
+            "text" => "練習：撰寫相簿照片列表",
+            "href" => "lab/html/list.php",
+        ),
+        array(
+            "text" => "延伸閱讀：Dive Into Accessibility",
+            "href" => "http://dia.z6i.org/",
+            "answer" => FALSE,
+        )
     ),
     "樣式之美 - CSS" => array(
         array(
