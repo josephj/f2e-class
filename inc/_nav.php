@@ -6,6 +6,29 @@
                 <a href="/" class="yui3-menuitem-content">課程首頁</a>
             </li>
             <li>
+                <a href="#album" class="yui3-menu-label">
+                    <em>實作相簿</em>
+                </a>
+                <div id="album" class="yui3-menu yui3-menu-hidden">
+                    <div class="yui3-menu-content">
+                        <ul>
+                            <li class="yui3-menuitem">
+                                <a href="/album" class="yui3-menuitem-content" target="_blank">照片交流區</a>
+                            </li>
+                            <li class="yui3-menuitem">
+                                <a href="http://socket.f2eclass.com" class="yui3-menuitem-content" target="_blank">Socket.io</a>
+                            </li>
+                            <li class="yui3-menuitem">
+                                <a href="http://www.flickr.com/photos/88526344@N03/" class="yui3-menuitem-content" target="_blank">Flickr 儲存空間</a>
+                            </li>
+                            <li class="yui3-menuitem">
+                                <a href='javascript:(function(){var el = document.createElement("script");el.src = "http://f2eclass.com/lab/flickr/bookmarklet.js";document.getElementsByTagName("head")[0].appendChild(el);}());' class="yui3-menuitem-content">JavaScript 書籤</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
                 <a href="#w3school" class="yui3-menu-label">
                     <em>W3School 相關資源</em>
                 </a>
@@ -69,26 +92,6 @@
                             </li>
                             <li>
                                 <a href="http://refresh-sf.com/yui/" class="yui3-menuitem-content" target="_blank">YUI Compressor</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <a href="#album" class="yui3-menu-label">
-                    <em>實作相簿</em>
-                </a>
-                <div id="album" class="yui3-menu yui3-menu-hidden">
-                    <div class="yui3-menu-content">
-                        <ul>
-                            <li class="yui3-menuitem">
-                                <a href="/album" class="yui3-menuitem-content" target="_blank">照片交流區</a>
-                            </li>
-                            <li class="yui3-menuitem">
-                                <a href="http://www.flickr.com/photos/88526344@N03/" class="yui3-menuitem-content" target="_blank">Flickr 儲存空間</a>
-                            </li>
-                            <li class="yui3-menuitem">
-                                <a href='javascript:(function(){var el=document.createElement("script");el.src="http://f2eclass.com/lab/flickr/bookmarklet.js";document.getElementsByTagName("head")[0].appendChild(el);}());")")})' class="yui3-menuitem-content">JavaScript 書籤</a>
                             </li>
                         </ul>
                     </div>

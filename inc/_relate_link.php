@@ -69,6 +69,11 @@ $data = array(
             "answer" => FALSE,
         ),
         array(
+            "text" => "參考：960 Grid System",
+            "href" => "http://960.gs/",
+            "answer" => FALSE,
+        ),
+        array(
             "text" => "YUI Reset",
             "href" => "lab/css/reset.html",
         ),
