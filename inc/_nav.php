@@ -52,6 +52,29 @@
                 </div>
             </li>
             <li>
+                <a href="#tools" class="yui3-menu-label">
+                    <em>線上工具</em>
+                </a>
+                <div id="tools" class="yui3-menu yui3-menu-hidden">
+                    <div class="yui3-menu-content">
+                        <ul>
+                            <li class="yui3-menuitem">
+                                <a href="http://jsfiddle.net/" class="yui3-menuitem-content" target="_blank">jsFiddle</a>
+                            </li>
+                            <li class="yui3-menuitem">
+                                <a href="http://jsbeautifier.org" class="yui3-menuitem-content" target="_blank">JavaScript Beautifier</a>
+                            </li>
+                            <li>
+                                <a href="http://www.smushit.com/ysmush.it/" class="yui3-menuitem-content" target="_blank">Smush.it</a>
+                            </li>
+                            <li>
+                                <a href="http://refresh-sf.com/yui/" class="yui3-menuitem-content" target="_blank">YUI Compressor</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
                 <a href="#album" class="yui3-menu-label">
                     <em>實作相簿</em>
                 </a>
