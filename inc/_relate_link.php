@@ -69,6 +69,11 @@ $data = array(
             "answer" => FALSE,
         ),
         array(
+            "text" => "參考：960 Grid System",
+            "href" => "http://960.gs/",
+            "answer" => FALSE,
+        ),
+        array(
             "text" => "YUI Reset",
             "href" => "lab/css/reset.html",
         ),
@@ -162,6 +167,18 @@ $data = array(
         array(
             "text" => "投影片下載",
             "href" => "slide/debugging.pdf",
+            "answer" => FALSE,
+        ),
+        array(
+            "text" => "載入投影片",
+            "id"   => "14768361",
+            "href" => "http://www.slideshare.net/secret/j00qAEqNP86eFu",
+            "class" => "slide-link",
+            "answer" => FALSE,
+        ),
+        array(
+            "text" => "Chrome Develoepr 的 Breakpoints 教學",
+            "href" => "https://developers.google.com/chrome-developer-tools/docs/scripts-breakpoints",
             "answer" => FALSE,
         ),
     ),

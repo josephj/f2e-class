@@ -93,7 +93,7 @@
 }
 
 /* line 55, ../sass/_relate_link.scss */
-.yui3-accordion-item-active .yui3-accordion-item-trigger a:link, .yui3-accordion-item-active .yui3-accordion-item-trigger a:hover {
+.yui3-accordion-item-active .yui3-accordion-item-trigger a:link, .yui3-accordion-item-active .yui3-accordion-item-trigger a:hover, .yui3-accordion-item-active .yui3-accordion-item-trigger a:visited {
     background: #08c !important;
     color: #fff !important;
 }
