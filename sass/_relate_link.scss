@@ -52,7 +52,7 @@
     }
 }
 .yui3-accordion-item-active .yui3-accordion-item-trigger a {
-    &:link, &:hover {
+    &:link, &:hover, &:visited {
         background: #08c !important;
         color: #fff !important;
     }
