@@ -23,6 +23,10 @@
                     <p>擷取畫面顏色的好用小工具。</p>
                 </li>
                 <li>
+                    <a href="http://www.fiddler2.com/fiddler2/" target="_blank">Fiddler Debugging Proxy</a>
+                    <p>F2E 必備的除錯工具。</p>
+                </li>
+                <li>
                     <a href="http://www.adobe.com/cfusion/tdrc/index.cfm?product=fireworks&loc=zh_tw" target="_blank">Fireworks CS6</a>
                     <p>F2E 常用的影像處理軟體。</p>
                 </li>
@@ -36,7 +40,7 @@
                 </li>
                 <li>
                     <a href="http://www.google.com/intl/zh-TW/chrome/browser/" target="_blank">Google Chrome</a>
-                    <p>大多數 F2E 開發人員都用此瀏覽器。</p>
+                    <p>大多數 F2E 開發人員都用此瀏覽器。我比較喜歡 Firefox 就是了 XD</p>
                 </li>
             </ul>
         </div>
