@@ -234,7 +234,8 @@ $data = array(
               $answer = (isset($link["answer"]) && intval($link["answer"]) === 0) ? FALSE : TRUE;
               if ($answer) :
                   $parts = pathinfo($link["href"]);
-                  $answer = "{$parts["dirname"]}/{$parts["filename"]}-answer.{$parts["extension"]}";
+                  $extension = str_replace("phps", "php", $parts["extension"]);
+                  $answer = "{$parts["dirname"]}/{$parts["filename"]}-answer.{$extension}";
               endif;
 
 ?>
