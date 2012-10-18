@@ -1,4 +1,3 @@
-<!-- #relate-link 相關連結模組 (開始) -->
 <?php
 $data = array(
     "盤古開天 - Intro" => array(
@@ -203,43 +202,42 @@ $data = array(
         ),
     ),
 );
-?><div id="relate-link">
-    <div class="mod-content">
-        <div class="hd">
-            <h2>連結列表</h2>
-        </div>
-        <div class="bd yui3-accordion">
+?>
+            <!-- #relate-link 相關連結模組 (開始) -->
+            <div id="relate-link">
+                <div class="mod-content">
+                    <div class="hd">
+                        <h2>連結列表</h2>
+                    </div>
+                    <div class="bd yui3-accordion">
 <?php
       $i = 0;
       foreach ($data as $category => $links):
           $class = ($i === 0) ? " yui3-accordion-item-active" : "";
           $i++;
 ?>
-            <div class="yui3-accordion-item<?php echo $class; ?>">
-                <div class="yui3-accordion-item-hd">
-                    <h3 class="yui3-accordion-item-trigger">
-                        <a href="#"><?php echo $category; ?></a>
-                    </h3>
-                </div>
-                <div class="yui3-accordion-item-bd">
-                    <ul>
+                        <div class="yui3-accordion-item<?php echo $class; ?>">
+                            <div class="yui3-accordion-item-hd">
+                                <h3 class="yui3-accordion-item-trigger">
+                                    <a href="#"><?php echo $category; ?></a>
+                                </h3>
+                            </div>
+                            <div class="yui3-accordion-item-bd">
+                                <ul>
 <?php
-          foreach ($links as $link):
-              $class = isset($link["class"]) ? " class=\"{$link["class"]}\"" : "";
-              $id = isset($link["id"]) ? " id=\"{$link["id"]}\"" : "";
+                      foreach ($links as $link):
+                          $class = isset($link["class"]) ? " class=\"{$link["class"]}\"" : "";
+                          $id = isset($link["id"]) ? " id=\"{$link["id"]}\"" : "";
 ?>
-                        <li>
-                            <a href="<?php echo $link["href"]; ?>"
-                              <?php echo $id; ?>
-                              <?php echo $class; ?>
-                               target="_blank"><?php echo $link["text"]; ?></a>
-                        </li>
+                                    <li>
+                                        <a href="<?php echo $link["href"]; ?>"<?php echo $id; ?><?php echo $class; ?> target="_blank"><?php echo $link["text"]; ?></a>
+                                    </li>
 <?php     endforeach; ?>
-                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+<?php endforeach; ?>
+                    </div>
                 </div>
             </div>
-<?php endforeach; ?>
-        </div>
-    </div>
-</div>
-<!-- #relate-link 相關連結模組 (結束) -->
+            <!-- #relate-link 相關連結模組 (結束) -->
