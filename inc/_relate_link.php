@@ -42,12 +42,16 @@ $data = array(
             "href" => "lab/html/module.html",
         ),
         array(
+            "text" => "示範：表單撰寫",
+            "href" => "lab/html/form.html",
+        ),
+        array(
             "text" => "練習：撰寫相簿存檔表單",
-            "href" => "lab/html/save_form.php",
+            "href" => "lab/html/save_form.html",
         ),
         array(
             "text" => "練習：撰寫相簿照片列表",
-            "href" => "lab/html/list.php",
+            "href" => "lab/html/list.phps",
         ),
         array(
             "text" => "延伸閱讀：Dive Into Accessibility",
@@ -227,12 +231,18 @@ $data = array(
           foreach ($links as $link):
               $class = isset($link["class"]) ? " class=\"{$link["class"]}\"" : "";
               $id = isset($link["id"]) ? " id=\"{$link["id"]}\"" : "";
+              $answer = (isset($link["answer"]) && intval($link["answer"]) === 0) ? FALSE : TRUE;
+              if ($answer) :
+                  $parts = pathinfo($link["href"]);
+                  $answer = "{$parts["dirname"]}/{$parts["filename"]}-answer.{$parts["extension"]}";
+              endif;
+
 ?>
                         <li>
-                            <a href="<?php echo $link["href"]; ?>"
-                              <?php echo $id; ?>
-                              <?php echo $class; ?>
-                               target="_blank"><?php echo $link["text"]; ?></a>
+                            <a href="<?php echo $link["href"]; ?>"<?php echo $id; ?><?php echo $class; ?> target="_blank"><?php echo $link["text"]; ?></a>
+<?php         if ($answer): ?>
+                            <span class="answer">(<a href="<?php echo $answer; ?>" target="_blank">解答</a>)</span>
+<?php         endif; ?>
                         </li>
 <?php     endforeach; ?>
                     </ul>

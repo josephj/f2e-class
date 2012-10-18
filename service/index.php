@@ -5,6 +5,8 @@ require_once "function.php";
 $photoset_id = "72157631752849808";
 $method   = getREQUEST("method");
 $callback = getREQUEST("callback");
+$redirect = getREQUEST("redirect");
+$format   = getREQUEST("format");
 
 $f = new phpFlickr("2070c8ac214487572681a57a0b7d3e40", "67794c1d44a9fc7e");
 $f->setToken("72157631752899669-3729349dd1b76f08");
@@ -56,5 +58,23 @@ switch ($method)
         break;
 }
 
-echo ($callback) ? "$callback($result);" : $result;
+if ($redirect !== "")
+{
+    header("Location: $redirect");
+    exit;
+}
+
+if ($format === "php")
+{
+    $result = json_decode($result);
+    echo "儲存成功，以下是除錯訊息！<br>";
+    echo "<pre>";
+    print_r($result);
+    exit;
+}
+else
+{
+    echo ($callback) ? "$callback($result);" : $result;
+}
+
 ?>
