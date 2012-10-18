@@ -13,8 +13,7 @@ $site_url = "http://www.slideshare.net/josephj/introduction-14734059";
         <div class="player">
             <iframe src="<?php echo $embed_url; ?>" allowfullscreen></iframe>
             <div class="info">
-                <a href="<?php echo $site_url; ?>" target="_blank" class="site-link">Slide</a>
-                from <a href="http://www.slideshare.net/josephj" target="_blank">Joseph Chiang</a>
+                 投影片製作 By <a href="http://www.slideshare.net/josephj" target="_blank">Joseph Chiang</a>
             </div>
         </div>
     </div>
