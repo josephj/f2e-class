@@ -41,12 +41,16 @@ $data = array(
             "href" => "lab/html/module.html",
         ),
         array(
+            "text" => "示範：表單撰寫",
+            "href" => "lab/html/form.html",
+        ),
+        array(
             "text" => "練習：撰寫相簿存檔表單",
-            "href" => "lab/html/save_form.php",
+            "href" => "lab/html/save_form.html",
         ),
         array(
             "text" => "練習：撰寫相簿照片列表",
-            "href" => "lab/html/list.php",
+            "href" => "lab/html/list.phps",
         ),
         array(
             "text" => "延伸閱讀：Dive Into Accessibility",
@@ -203,41 +207,51 @@ $data = array(
     ),
 );
 ?>
-            <!-- #relate-link 相關連結模組 (開始) -->
-            <div id="relate-link">
-                <div class="mod-content">
-                    <div class="hd">
-                        <h2>連結列表</h2>
-                    </div>
-                    <div class="bd yui3-accordion">
+<!-- #relate-link 相關連結模組 (開始) -->
+<div id="relate-link">
+<div class="mod-content">
+    <div class="hd">
+        <h2>連結列表</h2>
+    </div>
+    <div class="bd yui3-accordion">
 <?php
       $i = 0;
       foreach ($data as $category => $links):
           $class = ($i === 0) ? " yui3-accordion-item-active" : "";
           $i++;
 ?>
-                        <div class="yui3-accordion-item<?php echo $class; ?>">
-                            <div class="yui3-accordion-item-hd">
-                                <h3 class="yui3-accordion-item-trigger">
-                                    <a href="#"><?php echo $category; ?></a>
-                                </h3>
-                            </div>
-                            <div class="yui3-accordion-item-bd">
-                                <ul>
+            <div class="yui3-accordion-item<?php echo $class; ?>">
+                <div class="yui3-accordion-item-hd">
+                    <h3 class="yui3-accordion-item-trigger">
+                        <a href="#"><?php echo $category; ?></a>
+                    </h3>
+                </div>
+                <div class="yui3-accordion-item-bd">
+                    <ul>
 <?php
-                      foreach ($links as $link):
-                          $class = isset($link["class"]) ? " class=\"{$link["class"]}\"" : "";
-                          $id = isset($link["id"]) ? " id=\"{$link["id"]}\"" : "";
+          foreach ($links as $link):
+              $class = isset($link["class"]) ? " class=\"{$link["class"]}\"" : "";
+              $id = isset($link["id"]) ? " id=\"{$link["id"]}\"" : "";
+              $answer = (isset($link["answer"]) && intval($link["answer"]) === 0) ? FALSE : TRUE;
+              if ($answer) :
+                  $parts = pathinfo($link["href"]);
+                  $extension = str_replace("phps", "php", $parts["extension"]);
+                  $answer = "{$parts["dirname"]}/{$parts["filename"]}-answer.{$extension}";
+              endif;
+
 ?>
-                                    <li>
-                                        <a href="<?php echo $link["href"]; ?>"<?php echo $id; ?><?php echo $class; ?> target="_blank"><?php echo $link["text"]; ?></a>
-                                    </li>
+                        <li>
+                            <a href="<?php echo $link["href"]; ?>"<?php echo $id; ?><?php echo $class; ?> target="_blank"><?php echo $link["text"]; ?></a>
+<?php         if ($answer): ?>
+                            <span class="answer">(<a href="<?php echo $answer; ?>" target="_blank">解答</a>)</span>
+<?php         endif; ?>
+                        </li>
 <?php     endforeach; ?>
-                                </ul>
-                            </div>
-                        </div>
-<?php endforeach; ?>
-                    </div>
+                    </ul>
                 </div>
             </div>
-            <!-- #relate-link 相關連結模組 (結束) -->
+<?php endforeach; ?>
+        </div>
+    </div>
+</div>
+<!-- #relate-link 相關連結模組 (結束) -->

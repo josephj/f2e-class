@@ -1,0 +1,31 @@
+#article {
+    width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+#article .hd {
+    margin:10px auto;
+}
+#article .hd h1 {
+    /* font-size:16px; px 在 IE 6 無法縮放 */
+    font-size:123.1%;
+    font-weight:bold;
+}
+#article .bd {
+    background:#ffc;
+    padding:20px;
+    margin-bottom:5px;
+}
+#article .bd p {
+    /* font-size:12px; px 在 IE 6 無法縮放 */
+    font-size:93%;
+    letter-spacing:1px;
+    line-height:1.5;
+}
+#article .ft {
+    text-align:right;
+}
+#article .ft a {
+    color:#369;
+    text-decoration:none;
+}
