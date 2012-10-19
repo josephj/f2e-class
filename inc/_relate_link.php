@@ -4,13 +4,8 @@ $data = array(
         array(
             "text" => "載入投影片",
             "id"   => "14734059",
-            "href" => "http://www.slideshare.net/secret/EZFi4j73B8lIx5",
+            "href" => "#show-slide",
             "class" => "slide-link",
-            "answer" => FALSE,
-        ),
-        array(
-            "text" => "投影片下載",
-            "href" => "slide/introduction.pdf",
             "answer" => FALSE,
         ),
         array(
@@ -23,13 +18,8 @@ $data = array(
         array(
             "text" => "載入投影片",
             "id"   => "14701114",
-            "href" => "http://www.slideshare.net/secret/4RHnJKVqfeGAn1",
+            "href" => "#show-slide",
             "class" => "slide-link",
-            "answer" => FALSE,
-        ),
-        array(
-            "text" => "投影片下載",
-            "href" => "slide/html.pdf",
             "answer" => FALSE,
         ),
         array(
@@ -62,13 +52,8 @@ $data = array(
         array(
             "text" => "載入投影片",
             "id"   => "14701189",
-            "href" => "http://www.slideshare.net/secret/hIIfIQzqhZcpc",
+            "href" => "#show-slide",
             "class" => "slide-link",
-            "answer" => FALSE,
-        ),
-        array(
-            "text" => "投影片下載",
-            "href" => "slide/css.pdf",
             "answer" => FALSE,
         ),
         array(
@@ -97,22 +82,16 @@ $data = array(
         array(
             "text" => "載入投影片",
             "id"   => "14734172",
-            "href" => "http://www.slideshare.net/secret/IyGDWRyrPwhwIi",
+            "href" => "#show-slide",
             "class" => "slide-link",
             "answer" => FALSE,
         ),
-        array(
-            "text" => "投影片下載",
-            "href" => "slide/javascript.pdf",
-            "answer" => FALSE,
-        ),
-
     ),
     "功力大增 - YUI" => array(
         array(
             "text" => "載入投影片",
             "id"   => "14721701",
-            "href" => "http://www.slideshare.net/secret/FA2dV3uwmXtkwb",
+            "href" => "#show-slide",
             "class" => "slide-link",
             "answer" => FALSE,
         ),
@@ -168,14 +147,9 @@ $data = array(
     ),
     "自我省視 - Debug / Performance" => array(
         array(
-            "text" => "投影片下載",
-            "href" => "slide/debugging.pdf",
-            "answer" => FALSE,
-        ),
-        array(
             "text" => "載入投影片",
             "id"   => "14768361",
-            "href" => "http://www.slideshare.net/secret/j00qAEqNP86eFu",
+            "href" => "#show-slide",
             "class" => "slide-link",
             "answer" => FALSE,
         ),
@@ -189,21 +163,12 @@ $data = array(
         array(
             "text" => "載入投影片",
             "id"   => "14734167",
-            "href" => "https://www.slideshare.net/secret/oUD3sexNMxrs1w",
+            "href" => "#show-slide",
             "class" => "slide-link",
-            "answer" => FALSE,
-        ),
-        array(
-            "text" => "投影片下載",
-            "href" => "slide/nodejs.pdf",
             "answer" => FALSE,
         ),
     ),
     "放眼未來 - HTML5" => array(
-        array(
-            "text" => "投影片下載",
-            "href" => "slide/html5.pdf",
-        ),
     ),
 );
 ?>
