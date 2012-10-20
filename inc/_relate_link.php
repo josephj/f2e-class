@@ -58,24 +58,62 @@ $data = array(
             "answer" => FALSE,
         ),
         array(
+            "text" => "練習：float 浮動",
+            "href" => "lab/css/float.html",
+        ),
+        array(
+            "text" => "練習：background 背景",
+            "href" => "lab/css/background.html",
+        ),
+        array(
+            "text" => "練習：CSS Hack",
+            "href" => "lab/css/css-hack.html",
+        ),
+        array(
+            "text" => "練習：Module",
+            "href" => "lab/css/module.html",
+        ),
+        array(
+            "text" => "練習：Bootstrap",
+            "href" => "lab/css/bootstrap.html",
+        ),
+        array(
+            "text" => "練習：position 定位",
+            "href" => "lab/css/position.html",
+        ),
+        array(
+            "text" => "練習：YUI Reset",
+            "href" => "lab/css/reset.html",
+        ),
+        array(
+            "text" => "練習：YUI Base",
+            "href" => "lab/css/base.html",
+        ),
+        array(
             "text" => "參考：960 Grid System",
             "href" => "http://960.gs/",
             "answer" => FALSE,
         ),
         array(
-            "text" => "YUI Reset",
-            "href" => "lab/css/reset.html",
+            "text" => "參考：YUI3 CSS Grid",
+            "href" => "http://yuilibrary.com/yui/docs/cssgrids/",
+            "answer" => FALSE,
         ),
         array(
-            "text" => "YUI Fonts",
-            "href" => "lab/css/font.html",
+            "text" => "參考：YUI Grids Builder",
+            "href=" => "http://developer.yahoo.com/yui/grids/builder/",
+            "answer" => FALSE,
         ),
         array(
-            "text" => "YUI Grids",
+            "text" => "練習：YUI 2 Grids",
             "href" => "lab/css/grids.html",
         ),
         array(
-            "text" => "YUI Buttons",
+            "text" => "練習：YUI Buttons",
+            "href" => "lab/css/button.html",
+        ),
+        array(
+            "text" => "練習：Compass",
             "href" => "lab/css/button.html",
         ),
     ),
@@ -201,11 +239,12 @@ $data = array(
                   $parts = pathinfo($link["href"]);
                   $extension = str_replace("phps", "php", $parts["extension"]);
                   $answer = "{$parts["dirname"]}/{$parts["filename"]}-answer.{$extension}";
+                  $target = ($answer) ? "lab" : "_blank";
               endif;
 
 ?>
                         <li>
-                            <a href="<?php echo $link["href"]; ?>"<?php echo $id; ?><?php echo $class; ?> target="_blank"><?php echo $link["text"]; ?></a>
+                            <a href="<?php echo $link["href"]; ?>"<?php echo $id; ?><?php echo $class; ?> target="<?php echo $target; ?>"><?php echo $link["text"]; ?></a>
 <?php         if ($answer): ?>
                             <span class="answer">(<a href="<?php echo $answer; ?>" target="_blank">解答</a>)</span>
 <?php         endif; ?>
