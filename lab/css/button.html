@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS - YUI Buttons</title>
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.2/build/cssreset/reset-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.2/build/cssbase/base-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.3/build/cssbutton/cssbutton.css">
+<style>
+body {
+    padding: 10px;
+}
+.yui3-button-icon {
+    background: url(http://yuilibrary.com/yui/docs/assets/button/icon-sprite-dark-and-light-24.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 20px;
+    vertical-align: middle;
+    width: 20px;
+}
+.yui3-button-icon-bold {
+    background-position: 1px 1px;
+}
+.yui3-button-icon-italic {
+    background-position: 1px -35px;
+}
+.yui3-button-icon-underline {
+    background-position: 1px -71px;
+}
+/* 請替 .warning, .success, .error, notice 加上不同的 background-color */
+/* 分別是 #FAF55F, #57A957, #C43C35, #1B7AE0 */
+
+
+</style>
+</head>
+<body class="yui3-skin-sam">
+
+    <h1>YUI Buttons</h1>
+
+    <h2>Button Tags</h2>
+    <button class="yui3-button">&lt;button&gt;</button>
+    <input type="button" class="yui3-button" value='&lt;input type="button"&gt;'>
+    <input type="submit" class="yui3-button" value='&lt;input type="submit"&gt;'>
+
+    <h2>Other Tags</h2>
+    <div class="yui3-button">&lt;div&gt;</div>
+    <span class="yui3-button">&lt;span&gt;</span>
+    <a class="yui3-button">&lt;a&gt;</a>
+
+    <h2>Colors</h2>
+    <button class="yui3-button success">.success <br> #57A957</button>
+    <button class="yui3-button warning">.warning <br> #FAF55F</button>
+    <button class="yui3-button error">.error <br> #C43C35</button>
+    <button class="yui3-button notice">.notice <br> #1B7AE0</button>
+
+    <h2>Icon Buttons</h2>
+    <button class="yui3-button">
+        <span class="yui3-button-icon yui3-button-icon-bold"></span>
+    </button>
+
+    <button class="yui3-button">
+        <span class="yui3-button-icon yui3-button-icon-italic"></span>
+    </button>
+
+    <button class="yui3-button">
+        <span class="yui3-button-icon yui3-button-icon-underline"></span>
+    </button>
+
+    <h2>Image Button</h2>
+    <input type="image" id="imageButton" class="yui3-button" src="http://yuilibrary.com/yui/docs/assets/button/yui-logo.png"></input>
+
+</body>
+</html>
