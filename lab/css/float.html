@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS 浮動</title>
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.6.0/build/reset-fonts-grids/reset-fonts-grids.css">
+<style type="text/css">
+/*
+   步驟 :
+   在不改動 HTML 、只改 CSS 的情況下
+   1. 用 border:solid 5px #ccc 替整個模組設框線
+   2. 希望大標題與 YUI 的 Logo 能一左一右，請利用 float 來做
+
+   清除浮動的方法，需要在 Floating 的上一層做處理。
+*/
+#masthead .bd {
+    border: solid 5px #ccc;
+    /* IE 9 以前的瀏覽器：加上 zoom: 1 */
+}
+/* 其他標準瀏覽器： 利用 :after pseudo class 增加一個新節點
+   clear: both;
+   content: "";
+   display: block;
+ */
+#masthead .bd:after {
+
+}
+#masthead .title {
+    font-size: 197%;
+    font-weight: bold;
+    /* 往左浮動 */
+
+}
+#masthead .yui-logo {
+    /* 往右浮動 */
+
+}
+</style>
+</head>
+<body>
+
+    <!-- 這是一個頁首模組，有一個大標題跟 Powered By YUI 的 Logo -->
+    <div id="masthead">
+        <div class="bd">
+            <span class="title">雅虎前端工程半日班</span>
+            <a href="http://tw.developer.yahoo.com/" class="yui-logo" width="80" height="40">
+                <img src="http://josephj.com/training/ncu/ico_yui.gif">
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

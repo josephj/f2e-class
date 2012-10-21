@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+<meta charset="utf-8">
+<title>HTML 模組</title>
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset-fonts-grids/reset-fonts-grids.css">
+<style type="text/css">
+/* 步驟 2 : 請替文章模組設定樣式：例如替 h1 設為粗體、*/
+#article {
+    width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+#article .hd {
+    margin:10px auto;
+}
+#article .hd h1 {
+    /* font-size:16px; px 在 IE 6 無法縮放 */
+    font-size:123.1%;
+    font-weight:bold;
+}
+#article .bd {
+    background:#ffc;
+    padding:20px;
+    margin-bottom:5px;
+}
+#article .bd p {
+    /* font-size:12px; px 在 IE 6 無法縮放 */
+    font-size:93%;
+    letter-spacing:1px;
+    line-height:1.5;
+}
+#article .ft {
+    text-align:right;
+}
+#article .ft a {
+    color:#369;
+    text-decoration:none;
+}
+</style>
+</head>
+<body>
+<body class="yui-skin-sam">
+    <div id="doc2" class="yui-t5">
+        <div id="bd">
+            <div id="yui-main">
+                <div class="yui-b">
+
+                    <!-- 步驟 1 : 這是一個文章模組，請替加上結構化的 id 與 class -->
+                    <div>
+                        <div>
+                            <h1>在 Linix 的 Command Line 模式下建置 Flex 開發環境</h1>
+                        </div>
+                        <div>
+                            <p>
+                                大部分的人會覺得我有病吧，明明就有一個好用的 Flex Builder 可拖拉，為何還要用 CLI (Command Line Interface) 開發呢？
+                                請理解我是徒手 + 不查詢就寫 HTML / CSS / JavaScript 的硬派前端工程師出身、加上喜愛沈溺於敲鍵盤的爽感...
+                            </p>
+                        </div>
+                        <div>
+                            <a href="http://josephj.com/entry.php?id=181">閱讀全文...</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

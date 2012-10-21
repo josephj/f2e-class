@@ -6,6 +6,9 @@ curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 $data = curl_exec($ch);
+echo "<pre>";
+print_r($data);
+exit;
 $photos = json_decode($data); // $photos 變數儲存了我們所有照片
 curl_close($ch);
 ?><!DOCTYPE html>

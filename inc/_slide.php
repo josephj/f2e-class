@@ -1,6 +1,6 @@
 <?php
-$embed_url = "https://www.slideshare.net/slideshow/embed_code/14734059?rel=0";
-$site_url = "http://www.slideshare.net/josephj/introduction-14734059";
+$slide_id = (isset($_COOKIE["slide_id"]) && $_COOKIE["slide_id"] !== "") ? $_COOKIE["slide_id"] : "14734059";
+$embed_url = "https://www.slideshare.net/slideshow/embed_code/$slide_id?rel=0";
 ?><!-- #slide (start) -->
 <div id="slide">
     <div class="hd clearfix">

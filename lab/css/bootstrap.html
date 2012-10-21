@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS - Twitter Bootstrap 練習</title>
+<!-- 請加上一個外部 CSS - http://f2eclass.com/lab/css/bootstrap/css/bootstrap.min.css -->
+<style>
+html, body {
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+
+    <h1>CSS - Twitter Bootstrap 練習</h1>
+
+    <!--
+      需要參考以下的網址替 HTML 與 CSS 做調整:
+      http://twitter.github.com/bootstrap/base-css.html#forms
+    -->
+    <form action="form.php">
+        <legend>一般文字 input[type=text]</legend>
+        <label>First name:</label>
+        <input type="text" name="firstname">
+        <label>Last name: </label>
+        <input type="text" name="lastname">
+        <input type="submit" value="Submit">
+    </form>
+
+    <form action="form.php">
+        <legend>密碼欄位 input[type=password]</legend>
+        <label>Password:</label>
+        <input type="password" name="pwd">
+        <input type="submit" value="Submit">
+    </form>
+
+    <form action="form.php">
+        <legend>選項欄位 input[type=radio]</legend>
+        <label>
+            <input type="radio" name="sex" value="male">Male
+        </label>
+        <label>
+            <input type="radio" name="sex" value="female">Female
+        </label>
+        <input type="submit" value="Submit">
+    </form>
+
+    <form action="form.php">
+        <legend>選項欄位 input[type=checkbox]</legend>
+        <label>
+            <input type="checkbox" name="vehicle" value="Bike">I have a bike
+        </label>
+        <label>
+            <input type="checkbox" name="vehicle" value="Car">I have a car
+        </label>
+        <input type="submit" value="Submit">
+    </form>
+
+    <form method="post" action="form.php">
+        <legend>註冊表單</legend>
+        <div>
+            <label for="email">E-mail</label>
+            <input type="text" id="email" name="email">
+        </div>
+        <div>
+            <label for="password">密碼</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div>
+            <label for="confirm_password">確認密碼</label>
+            <input type="password" id="confirm_password" name="confirm_password">
+        </div>
+        <div>
+            <label for="last_name">姓氏</label>
+            <input type="text" id="last_name" name="last_name">
+        </div>
+        <div>
+            <label for="first_name">名字</label>
+            <input type="text" id="first_name" name="first_name">
+        </div>
+        <div>
+            <input type="submit" value="送出">
+        </div>
+    </form>
+
+</body>
+</html>
