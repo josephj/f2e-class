@@ -113,8 +113,24 @@ $data = array(
             "href" => "lab/css/button.html",
         ),
         array(
-            "text" => "練習：Compass",
-            "href" => "lab/css/button.html",
+            "text" => "Compass 範例下載",
+            "href" => "lab/css/compass.zip",
+            "answer" => FALSE,
+        ),
+        array(
+            "text" => "練習：Compass - No Sprite",
+            "href" => "lab/css/compass/normal.html",
+            "answer" => FALSE,
+        ),
+        array(
+            "text" => "練習：Compass - Sprite",
+            "href" => "lab/css/compass/basic-sprite.html",
+            "answer" => FALSE,
+        ),
+        array(
+            "text" => "練習：Compass - Auto Sprite",
+            "href" => "lab/css/compass/auto-sprite.html",
+            "answer" => FALSE,
         ),
     ),
     "賦予生命 - JavaScript" => array(

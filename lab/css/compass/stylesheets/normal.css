@@ -1,0 +1,40 @@
+/* No Sprite Version */
+/* line 3, ../sass/normal.scss */
+#media {
+    background: yellow;
+    width: 500px;
+}
+/* line 6, ../sass/normal.scss */
+#media li {
+    height: 40px;
+    line-height: 40px;
+}
+/* line 9, ../sass/normal.scss */
+#media li span {
+    height: 40px;
+    width: 40px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+}
+/* line 16, ../sass/normal.scss */
+#media li.photos span {
+    background-image: url(../images/player/ico_photos_default_small.png);
+}
+/* line 19, ../sass/normal.scss */
+#media li.music span {
+    background-image: url(../images/player/ico_music_default_small.png);
+}
+/* line 22, ../sass/normal.scss */
+#media li.videos span {
+    background-image: url(../images/player/ico_videos_default_small.png);
+}
+/* line 25, ../sass/normal.scss */
+#media li.documents span {
+    background-image: url(../images/player/ico_documents_default_small.png);
+}
