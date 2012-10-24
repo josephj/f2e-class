@@ -76,11 +76,14 @@
             </li>
             <li>
                 <a href="#tools" class="yui3-menu-label">
-                    <em>線上工具</em>
+                    <em>好用工具</em>
                 </a>
                 <div id="tools" class="yui3-menu yui3-menu-hidden">
                     <div class="yui3-menu-content">
                         <ul>
+                            <li class="yui3-menuitem">
+                                <a href="/sublime.php">Sublime Text 2</a>
+                            </li>
                             <li class="yui3-menuitem">
                                 <a href="http://jsfiddle.net/" class="yui3-menuitem-content" target="_blank">jsFiddle</a>
                             </li>

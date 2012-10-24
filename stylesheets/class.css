@@ -182,46 +182,104 @@
     float: right;
 }
 
-/* line 9, ../sass/class.scss */
+/* line 1, ../sass/_sublime.scss */
+#sublime {
+    width: 800px;
+    margin: 30px auto;
+    min-height: 350px;
+}
+/* line 5, ../sass/_sublime.scss */
+#sublime code {
+    color: green;
+}
+/* line 8, ../sass/_sublime.scss */
+#sublime pre {
+    padding: 10px 0;
+}
+/* line 11, ../sass/_sublime.scss */
+#sublime h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0;
+}
+/* line 17, ../sass/_sublime.scss */
+#sublime h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0;
+}
+/* line 23, ../sass/_sublime.scss */
+#sublime p {
+    margin: 0 0 15px;
+}
+/* line 26, ../sass/_sublime.scss */
+#sublime ol {
+    list-style-type: decimal;
+}
+/* line 29, ../sass/_sublime.scss */
+#sublime ul, #sublime ol {
+    margin-left: 30px;
+}
+/* line 31, ../sass/_sublime.scss */
+#sublime ul li, #sublime ol li {
+    color: #333;
+    font-size: 123.1%;
+    line-height: 1.5;
+    list-style-type: disc;
+    margin: 0 0 5px;
+}
+/* line 37, ../sass/_sublime.scss */
+#sublime ul li a, #sublime ul li em, #sublime ol li a, #sublime ol li em {
+    font-size: 123.1%;
+    font-weight: bold;
+}
+/* line 42, ../sass/_sublime.scss */
+#sublime ul li p a, #sublime ul li p em, #sublime ol li p a, #sublime ol li p em {
+    font-size: 100%;
+}
+
+/* line 10, ../sass/class.scss */
 body {
     background: #f8f8f8 url(/assets/noise.png);
     font-family: "Hiragino Maru Gothic Pro W4", "冬青黑體簡體中文", "微軟正黑體";
     color: #000;
 }
-/* line 13, ../sass/class.scss */
+/* line 14, ../sass/class.scss */
 body #doc3 {
     margin: 0;
 }
 
-/* line 17, ../sass/class.scss */
+/* line 18, ../sass/class.scss */
 .clearfix {
     zoom: 1;
 }
-/* line 19, ../sass/class.scss */
+/* line 20, ../sass/class.scss */
 .clearfix:after {
     clear: both;
     content: '';
     display: block;
 }
 
-/* line 26, ../sass/class.scss */
+/* line 27, ../sass/class.scss */
 a:link, a:visited {
     color: #08c;
     text-decoration: none;
 }
-/* line 30, ../sass/class.scss */
+/* line 31, ../sass/class.scss */
 a:hover {
     color: #f30;
     text-decoration: none;
 }
 
-/* line 35, ../sass/class.scss */
+/* line 36, ../sass/class.scss */
 #hd {
     position: relative;
     z-index: 1;
 }
 
-/* line 39, ../sass/class.scss */
+/* line 40, ../sass/class.scss */
 #bd {
     position: relative;
     z-index: 0;
