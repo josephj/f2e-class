@@ -48,8 +48,9 @@ print 'Please restart Sublime Text to finish installation'
             </ol>
             <h2>常用的快速鍵</h2>
             <ul>
-                <li>Ctrl + P : 快速找到自己所需要的檔案</li>
-                <li>Ctrl + Shift + P : 套件管理相關</li>
+                <li>Ctrl + K, Ctrl + [1 - 9] : 將現有的程式碼做摺疊。</li>
+                <li>Ctrl + P : 快速找到自己所需要的檔案。</li>
+                <li>Ctrl + Shift + P : 套件管理相關。</li>
                 <li>Ctrl + Space : 自動完成，這跟我們輸入法切換有衝突，需要叫出 Preferences > Key Bindings - User 做調整（我改為 Ctrl + G)：
                     <pre><code>[
     { "keys": ["ctrl+g"], "command": "auto_complete" }
@@ -60,15 +61,18 @@ print 'Please restart Sublime Text to finish installation'
             <ul>
                 <li>
                     <em>LiveReload</em>
-                    <p>當有檔案修改時、瀏覽器可以自動更新。 瀏覽器也需要安裝對應的外掛，例如 <a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei" target="_blank">Chrome</a>。</p>
+                    <p>
+                        當有檔案修改時、瀏覽器可以自動更新。 瀏覽器也需要安裝對應的外掛，例如 <a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei" target="_blank">Chrome</a>。
+                        不過我在使用時不太聽話就是了 :p
+                    </p>
                 </li>
                 <li>
                     <em>Compass</em>
-                    <p>CSS 建置工具</p>
+                    <p>CSS 建置工具，裝好以後按 Ctrl + B 即可啟動。</p>
                 </li>
                 <li>
                     <em>ZenCoding</em>
-                    <p>快速產生 CSS 與 HTML 的語法工具</p>
+                    <p>快速產生 CSS 與 HTML 的語法工具，輸入 <code>html>#photo-list>h2+ul>list.photo-item*10</code> 後面按個 Tab 試試看？</p>
                 </li>
                 <li>
                     <em>SublimeCodeIntel</em>
@@ -80,3 +84,4 @@ print 'Please restart Sublime Text to finish installation'
     </div>
 </div>
 <!-- #sublime Sublime 安裝與使用說明 (end) -->
+

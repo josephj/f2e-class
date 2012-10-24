@@ -156,6 +156,51 @@ $data = array(
                 "class" => "slide-link",
                 "answer" => FALSE,
             ),
+            array(
+                "text" => "JavaScript 練習樣板",
+                "href" => "/lab/js/_template.html",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "練習: Hello World!",
+                "href" => "/lab/js/hello.html",
+            ),
+            array(
+                "text" => "Undefined 1 未宣告有錯誤",
+                "href" => "/lab/js/undefined.html",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "Undefined 2 有宣告沒錯誤",
+                "href" => "/lab/js/undefined-2.html",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "型別轉換",
+                "href" => "/lab/js/type.html",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "Closure",
+                "href" => "/lab/js/closure.html",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "練習: Function",
+                "href" => "/lab/js/function.html",
+            ),
+            array(
+                "text" => "練習: if... else if... else...",
+                "href" => "/lab/js/if-else.html",
+            ),
+            array(
+                "text" => "練習: foreach",
+                "href" => "/lab/js/foreach.html",
+            ),
+            array(
+                "text" => "練習: 取得 DOM 節點的方式",
+                "href" => "/lab/js/dom-access.html",
+            ),
         ),
     ),
     "yui" => array(

@@ -82,7 +82,7 @@
                     <div class="yui3-menu-content">
                         <ul>
                             <li class="yui3-menuitem">
-                                <a href="/sublime.php">Sublime Text 2</a>
+                                <a href="/sublime.php" class="yui3-menuitem-content">Sublime Text 2</a>
                             </li>
                             <li class="yui3-menuitem">
                                 <a href="http://jsfiddle.net/" class="yui3-menuitem-content" target="_blank">jsFiddle</a>
