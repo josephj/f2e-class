@@ -3,7 +3,7 @@
     margin: 30px auto;
     min-height: 350px;
     code {
-       color: green; 
+       color: green;
     }
     pre {
         padding: 10px 0;
@@ -24,7 +24,7 @@
         margin: 0 0 15px;
     }
     ol {
-       list-style-type: decimal; 
+       list-style-type: decimal;
     }
     ul, ol {
         margin-left: 30px;
@@ -41,7 +41,10 @@
             p {
                a, em {
                    font-size: 100%;
-               } 
+               }
+               em {
+                   color: red;
+               }
             }
         }
     }

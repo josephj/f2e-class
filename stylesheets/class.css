@@ -238,6 +238,10 @@
 #sublime ul li p a, #sublime ul li p em, #sublime ol li p a, #sublime ol li p em {
     font-size: 100%;
 }
+/* line 45, ../sass/_sublime.scss */
+#sublime ul li p em, #sublime ol li p em {
+    color: red;
+}
 
 /* line 10, ../sass/class.scss */
 body {

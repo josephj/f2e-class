@@ -42,7 +42,8 @@ print 'Please restart Sublime Text to finish installation'
                     <em>套件安裝方式</em>
                     <p>
                         因為已經裝了 Package Control，未來套件就可以直接在介面上操作、連 Console 都不用呼叫！
-                        請按 <code>Ctrl + Shift + P</code>、輸入 "Install" 按 Enter 就會列出你可以安裝的 Sublime 套件喔！
+                        請按 <code>Ctrl + Shift + P</code>、輸入 "Install" 按 Enter 就會列出你可以安裝的 Sublime 套件、當然也可以直接搜尋！
+                        請注意：<em>會花點時間等待，請有些耐心，編輯器左下角會顯示目前的狀態</em> :)
                     </p>
                 </li>
             </ol>
@@ -58,6 +59,9 @@ print 'Please restart Sublime Text to finish installation'
                 </li>
             </ul>
             <h2>推薦安裝的套件</h2>
+                <p>
+                    如前面所提， 請按 <code>Ctrl + Shift + P</code>、輸入 "Install" 按 Enter 就可以搜尋 Sublime 套件！
+                </p>
             <ul>
                 <li>
                     <em>LiveReload</em>
