@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="josephj">
+<meta name="created" content="2012-10-10">
+<title>JavaScript - DOM Event</title>
+<style>
+.alt {
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+    <h1>JavaScript - DOM Event</h1>
+    <div id="form">
+        <div class="bd">
+            <form name="actions">
+                <!-- 目標：前一個例子一進來就做餐廳列表，這邊請在點選後再列出餐廳 -->
+                <button name="list">列出餐廳</button>
+                <button name="highlight">單雙行區隔</button>
+                <button name="reset">移除列表</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="restaurant">
+        <div class="hd">
+            <h2>新店市好吃的餐廳</h2>
+        </div>
+        <div class="bd">
+            <ul>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+    (function () {
+        var data = [
+            "可愛村便當：台北縣新店市大豐街8號",
+            "阿輝現炒黃牛肉：台北縣新店市中興路三段225號",
+            "黑人牛肉麵：台北縣新店市中興路三段176號",
+            "蘇杭：台北縣新店市民權路25號2F",
+            "王家包子：台北縣新店市國校路25號之1",
+            "辣。四川成都小炒：台北縣新店市吉安路2-1號",
+            "山東餃子館：台北縣新店市中央路133巷19號1樓",
+            "樂陶然健康小火鍋：台北縣新店市中央五街2號",
+            "六六火鍋：台北縣新店市中央路89號",
+            "龍門客棧：台北縣新店市中央路98號之1",
+            "麵對麵：台北縣新店市中央路33號"
+        ];
+
+        // 注意這邊取得物件的方法，是採用 BOM API 所提供的作法
+        // 對於 form 的處理是很好用的（大多需要用 name 屬性)
+        var formEl          = document.forms["actions"],
+            listButton      = formEl.elements["list"],
+            resetButton     = formEl.elements["reset"],
+            highlightButton = formEl.elements["highlight"];
+
+        var handleListClick = function (e) {
+            console.log("handleListClick() 被執行");
+            e.preventDefault();
+            var ul = document.getElementsByTagName("ul")[0];
+            for (var i = 0, j = data.length; i < j; i++) {
+                var newItem = document.createElement("li");
+                newItem.innerHTML = data[i];
+                ul.appendChild(newItem);
+                console.log("增加第 " + i + " 個項目成功...");
+            }
+        };
+
+        var handleResetClick = function (e) {
+
+            // 注意：e.preventDefault 為停止預設行為
+            // 表單中的按鈕預設行為都是送出資料到伺服器（重新整理）
+            // 我們要避免這種情況
+            e.preventDefault();
+            console.log("handleResetClick() 被執行");
+            var ul = document.getElementsByTagName("ul")[0];
+
+            // 注意：這邊為什麼要反過來做刪除呢？ 這個作法是必要的!
+            for (var i = ul.childNodes.length - 1; i >= 0; i--) {
+                ul.removeChild(ul.childNodes[i]);
+            };
+        };
+
+        var handleHighlightClick = function (e) {
+            console.log("handleHighlightClick() 被執行");
+            e.preventDefault();
+            var ul = document.getElementsByTagName("ul")[0];
+
+            // 只對單數列的設定 alt，迴圈從減 1 變成減 2 即可 :D
+            for (var i = ul.childNodes.length - 1; i >= 0; i -= 2) {
+                var el = ul.childNodes[i];
+                el.className = (el.className === "") ? "alt" : "";
+            };
+        };
+
+        // 步驟：請使用 <物件參考>.addEventListener("click", <事件處理函式>); 綁定事件。
+        listButton.addEventListener("click", handleListClick);
+        resetButton.addEventListener("click",handleResetClick);
+        highlightButton.addEventListener("click",handleHighlightClick);
+
+    }());
+   </script>
+</body>
+</html>

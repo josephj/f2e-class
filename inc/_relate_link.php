@@ -201,6 +201,14 @@ $data = array(
                 "text" => "練習: 取得 DOM 節點的方式",
                 "href" => "/lab/js/dom-access.html",
             ),
+            array(
+                "text" => "練習: 新增多個 DOM 節點的方式",
+                "href" => "/lab/js/dom-appendchild.html",
+            ),
+            array(
+                "text" => "練習: 結合 Event 來操作節點",
+                "href" => "/lab/js/dom-event.html",
+            ),
         ),
     ),
     "yui" => array(
