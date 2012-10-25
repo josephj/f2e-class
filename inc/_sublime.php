@@ -59,10 +59,16 @@ print 'Please restart Sublime Text to finish installation'
                 </li>
             </ul>
             <h2>推薦安裝的套件</h2>
-                <p>
-                    如前面所提， 請按 <code>Ctrl + Shift + P</code>、輸入 "Install" 按 Enter 就可以搜尋 Sublime 套件！
-                </p>
+            <p>
+                如前面所提， 請按 <code>Ctrl + Shift + P</code>、輸入 "Install" 按 Enter 就可以搜尋 Sublime 套件！
+            </p>
             <ul>
+                <li>
+                    <em>HTMLAttribute</em>
+                    <p>
+                        名字很清楚啦，就是針對 HTML 屬性的自動完成做補全。
+                    </p>
+                </li>
                 <li>
                     <em>LiveReload</em>
                     <p>
