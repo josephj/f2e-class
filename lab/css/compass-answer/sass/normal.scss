@@ -1,0 +1,37 @@
+/* 不使用 Sprite、將一般縮圖放入的方法 */
+/* 主要目的在體驗 Compass 的寫法 */
+@import "compass";
+#media {
+    background: yellow;
+    width: 500px;
+    li {
+        height: 40px;
+        line-height: 40px;
+        span {
+            // 請設定此 span 為 width:40px, height: 40px;
+            width: 40px;
+            height: 40px;
+            background-position: left center;
+            background-repeat: no-repeat;
+            @include inline-block();
+        }
+        &.photos span {
+            // 圖片位於 ../images/player/ico_photos_default_small.png
+            background-image: url(../images/player/ico_photos_default_small.png);
+        }
+        &.music span {
+            // 圖片位於 ../images/player/ico_music_default_small.png
+            background-image: url(../images/player/ico_music_default_small.png);
+        }
+        &.videos span {
+            // 圖片位於 ../images/player/ico_videos_default_small.png
+            background-image: url(../images/player/ico_videos_default_small.png);
+        }
+        &.documents span {
+            // 圖片位於 ../images/player/ico_documents_default_small.png
+            background-image: url(../images/player/ico_documents_default_small.png);
+        }
+    }
+}
+
+

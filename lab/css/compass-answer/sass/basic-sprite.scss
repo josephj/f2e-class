@@ -1,0 +1,34 @@
+/* Basic Sprite Version */
+@import "compass";
+#media {
+    background: pink;
+    width: 500px;
+    li {
+        height: 40px;
+        line-height: 40px;
+        span {
+            height: 40px;
+            width: 40px;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            // 請指定背景圖片到 images 目錄下的 sp_ico_media.png
+            background-image: url(../images/sp_ico_media.png);
+            @include inline-block();
+        }
+        &.photos span {
+            // 使用 background-position 調整位置（第 1 張圖)
+        }
+        &.music span {
+            // 使用 background-position 調整位置（第 2 張圖)
+            background-position: 0 -40px;
+        }
+        &.videos span {
+            // 使用 background-position 調整位置（第 3 張圖)
+            background-position: 0 -80px;
+        }
+        &.documents span {
+            // 使用 background-position 調整位置（第 4 張圖)
+            background-position: 0 -120px;
+        }
+    }
+}

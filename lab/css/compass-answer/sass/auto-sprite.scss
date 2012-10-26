@@ -1,0 +1,38 @@
+@import "compass";
+@import "compass/utilities/sprites";
+// 需要指定原始圖檔的路徑
+@import "player/*.png";
+
+/**/
+
+#media {
+    background: pink;
+    width: 500px;
+    li {
+        height: 40px;
+        line-height: 40px;
+        span {
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            height: 40px;
+            width: 40px;
+            @include inline-block();
+        }
+    }
+    li.photos span {
+        // 請使用 @include <目錄名>-sprite(原始檔案名不含附檔名, ico_photos_default_small);
+        @include player-sprite(ico_photos_default_small);
+    }
+    li.music span {
+        // 同上 ico_music_default_small
+        @include player-sprite(ico_music_default_small);
+    }
+    li.videos span {
+        // 同上 ico_vidoes_default_small
+        @include player-sprite(ico_videos_default_small);
+    }
+    li.documents span {
+        // 同上 ico_documents_default_small
+        @include player-sprite(ico_documents_default_small);
+    }
+}

@@ -1,0 +1,44 @@
+/* 不使用 Sprite、將一般縮圖放入的方法 */
+/* 主要目的在體驗 Compass 的寫法 */
+/* line 4, ../sass/normal.scss */
+#media {
+    background: yellow;
+    width: 500px;
+}
+/* line 7, ../sass/normal.scss */
+#media li {
+    height: 40px;
+    line-height: 40px;
+}
+/* line 10, ../sass/normal.scss */
+#media li span {
+    width: 40px;
+    height: 40px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    display: -moz-inline-box;
+    -moz-box-orient: vertical;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+}
+/* line 7, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+#media li span {
+    *display: inline;
+}
+/* line 18, ../sass/normal.scss */
+#media li.photos span {
+    background-image: url(../images/player/ico_photos_default_small.png);
+}
+/* line 22, ../sass/normal.scss */
+#media li.music span {
+    background-image: url(../images/player/ico_music_default_small.png);
+}
+/* line 26, ../sass/normal.scss */
+#media li.videos span {
+    background-image: url(../images/player/ico_videos_default_small.png);
+}
+/* line 30, ../sass/normal.scss */
+#media li.documents span {
+    background-image: url(../images/player/ico_documents_default_small.png);
+}

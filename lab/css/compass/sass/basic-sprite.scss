@@ -11,20 +11,21 @@
             width: 40px;
             background-position: 0 0;
             background-repeat: no-repeat;
-            background-image: url(../images/sp_ico_media.png);
+            // 請指定背景圖片到 images 目錄下的 sp_ico_media.png
+
             @include inline-block();
         }
         &.photos span {
-            background-position: 0 0;
+            // 使用 background-position 調整位置（第 1 張圖)
         }
         &.music span {
-            background-position: 0 -40px;
+            // 使用 background-position 調整位置（第 2 張圖)
         }
         &.videos span {
-            background-position: 0 -80px;
+            // 使用 background-position 調整位置（第 3 張圖)
         }
         &.documents span {
-            background-position: 0 -120px;
+            // 使用 background-position 調整位置（第 4 張圖)
         }
     }
 }
