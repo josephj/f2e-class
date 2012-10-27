@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>YUI - 模組架構</title>
+<script type="text/javascript" src="http://yui.yahooapis.com/3.7.3/build/yui/yui.js"></script>
+</head>
+<body>
+    <h1>YUI - 模組架構</h1>
+    <p>利用 YUI.add 建立 class 與 fitpi 模組供其他人使用</p>
+    <p>目的：了解 YUI 的模組架構是怎麼樣運作的。</p>
+
+    <script>
+    // Step 1 - 建立 class 這個模組，有一些關於前端工程實務訓練的基本資訊
+    YUI.add("class", function (Y) {
+        Y.Class = {
+            name : "前端工程實務訓練",
+            hours : 24,
+            students: [],
+            location: "台北市漢口街",
+            teacher: "josephj",
+            getStudents: function () {
+                return this.students.join(",")
+            }
+        };
+    }, "0.0.1");
+
+    // Step 2 - 建立 fitpi，針對 class 模組做一些修改
+    YUI.add("fitpi", function (Y) {
+        Y.Class.students = [
+            "阿達",
+            "阿富",
+            "達哥",
+            "阿斌"
+        ];
+    }, "0.0.1", {requires:["class"]});
+
+    // 注意：理論上 class 與 fitpi 都會是獨立的一支檔案。
+
+    // Step 3 - 使用時就只要指定 fitpi 即可，不需要
+    YUI().use("fitpi", function (Y) {
+        // 請使用你建立的 getStudents 方法
+        alert(Y.Class.getStudents());
+    });
+
+    </script>
+</body>
+</html>

@@ -223,23 +223,31 @@ $data = array(
                 "answer" => FALSE,
             ),
             array(
-                "text" => "Y.jsonp",
-                "href" => "lab/yui/jsonp.html",
+                "text" => "練習：YUI Node",
+                "href" => "lab/yui/node.html",
             ),
             array(
-                "text" => "Y.io",
+                "text" => "練習：YUI Note + Event",
+                "href" => "lab/yui/node-event.html",
+            ),
+            array(
+                "text" => "練習：Y.Anim",
+                "href" => "lab/yui/anim.html",
+            ),
+            array(
+                "text" => "練習：Y.io",
                 "href" => "lab/yui/io.html",
             ),
             array(
-                "text" => "Y.MenuNav",
-                "href" => "lab/yui/menunav.html",
+                "text" => "練習：Y.jsonp",
+                "href" => "lab/yui/jsonp.html",
             ),
             array(
-                "text" => "Y.Button",
-                "href" => "lab/yui/button.html",
+                "text" => "練習：Y.Handlebars",
+                "href" => "lab/yui/handlebars",
             ),
             array(
-                "text" => "Y.Panel",
+                "text" => "練習：Y.Panel",
                 "href" => "lab/yui/panel.html",
             ),
         ),
@@ -256,23 +264,23 @@ $data = array(
                 "answer" => FALSE,
             ),
             array(
-                "text" => "Y.jsonp",
+                "text" => "練習：Y.jsonp",
                 "href" => "lab/yui/jsonp.html",
             ),
             array(
-                "text" => "Y.io",
+                "text" => "練習：Y.io",
                 "href" => "lab/yui/io.html",
             ),
             array(
-                "text" => "Y.MenuNav",
+                "text" => "練習：Y.MenuNav",
                 "href" => "lab/yui/menunav.html",
             ),
             array(
-                "text" => "Y.Button",
+                "text" => "練習：Y.Button",
                 "href" => "lab/yui/button.html",
             ),
             array(
-                "text" => "Y.Panel",
+                "text" => "練習：Y.Panel",
                 "href" => "lab/yui/panel.html",
             ),
         ),

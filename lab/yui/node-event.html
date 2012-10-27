@@ -33,33 +33,26 @@
     </div>
     <script src="http://yui.yahooapis.com/3.7.2/build/yui/yui-min.js"></script>
     <script>
-    // 指定使用 node 與 event 兩個 YUI 模組
-    YUI().use("node", "event", function (Y) {
+    // 步驟 1 - 指定使用 node 與 event 兩個 YUI 模組
+    // YUI().use("模組 1", "模組 2", function (Y) {});
 
-        // 方法 1 - 每個節點綁事件
-        /*
-        Y.all("li").on("click", function (e) {
-            var node = e.target;
-            node.addClass("highlighted");
-        });
-        */
+        // 步驟 2 - 用 Y.delegate(事件, 函式, 母節點選取器, 過濾用Selector)
+        // Y.delegate("click", function (e) {}, ".restaurant", "li");
 
-        // 方法 2 - 只綁 .restaurant
-        Y.one(".restaurant").delegate("click", function (e) {
-            var node = e.currentTarget;
-            //node.addClass("highlighted");
-            node.toggleClass("highlighted");
-        }, "li");
+            // 步驟 2.1 - 在事件處理函式中，可以用 this 取得目前點選的標籤參考
 
-        // 點 2 下刪除節點
-        Y.one(".restaurant").delegate("dblclick", function (e) {
-            if (window.confirm("你確定要刪除此節點嗎？")) {
-                var node = e.currentTarget;
-                var parentNode = node.ancestor("ul");
-                node.remove();
-                alert(parentNode.get("childNodes").size());
-            }
-        }, "li");
+            // 步驟 2.2 - 針對目前的標籤，使用 toggleClass("highlighted"); 即可切換 class="hightlighted"
+
+
+        // 步驟 3 - 點 2 下刪除節點，同步驟 2 將事件指定為 dblclick
+
+            // 步驟 3.1 - 可以利用 window.confirm (會依使用者回答回傳 true 或 false)
+
+                // 步驟 3.2 - 用 this 取得目前的參考
+
+                // 步驟 3.3 - 使用此物件的 remove 方法
+
+                // 步驟 3.4 - 使用 Y.fire 發送一個 delete 事件、第二個參數是刪除的標籤內容
 
     });
     </script>
