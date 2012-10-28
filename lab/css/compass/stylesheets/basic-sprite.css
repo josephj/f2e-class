@@ -15,6 +15,7 @@
     width: 40px;
     background-position: 0 0;
     background-repeat: no-repeat;
+    background-image: url(../images/sp_ico_media.png);
     display: -moz-inline-box;
     -moz-box-orient: vertical;
     display: inline-block;
@@ -24,4 +25,8 @@
 /* line 7, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
 #media li span {
     *display: inline;
+}
+/* line 18, ../sass/basic-sprite.scss */
+#media li.photos span {
+    background-position: 0 -80px;
 }

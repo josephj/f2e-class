@@ -26,3 +26,7 @@
 #media li span {
     *display: inline;
 }
+/* line 18, ../sass/normal.scss */
+#media li.photos span {
+    background-image: url(../images/player/ico_photos_default_small.png);
+}

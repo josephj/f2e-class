@@ -1,0 +1,15 @@
+/* line 3, ../sass/box-shadow.scss */
+#foo {
+    background: green;
+    color: #fff;
+    padding: 15px 10px;
+    width: 300px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: #cccccc 5px 5px 10px;
+    -moz-box-shadow: #cccccc 5px 5px 10px;
+    box-shadow: #cccccc 5px 5px 10px;
+}

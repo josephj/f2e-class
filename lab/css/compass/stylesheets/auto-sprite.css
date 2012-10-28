@@ -1,20 +1,15 @@
-/* line 66, player/*.png */
-.player-sprite {
-    background: url('/images/player-s7d525b217a.png') no-repeat;
-}
-
 /**/
-/* line 6, ../sass/auto-sprite.scss */
+/* line 3, ../sass/auto-sprite.scss */
 #media {
     background: pink;
     width: 500px;
 }
-/* line 9, ../sass/auto-sprite.scss */
+/* line 6, ../sass/auto-sprite.scss */
 #media li {
     height: 40px;
     line-height: 40px;
 }
-/* line 12, ../sass/auto-sprite.scss */
+/* line 9, ../sass/auto-sprite.scss */
 #media li span {
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -29,4 +24,8 @@
 /* line 7, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
 #media li span {
     *display: inline;
+}
+/* line 17, ../sass/auto-sprite.scss */
+#media li.photos span {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAA3NCSVQICAjb4U/gAAABOFBMVEX///////+Pys5rub5Cpaz///9Cpaz///96wcZCpaz///9yvcJrub5IqK9Cpaz///+03eCGx8tCpaz////2+/tCpaz////5/P3N6euk19t6wcZsu8BNrbRCpaz2+/vu+PiIyc1su8BIqK9Cpaz////5/P3l9fbG5umk19tCpaz////2+/vX7/HJ6et7x81kuL5IqK9Cpaz////u+Pja8PHJ6eur29+b1NhRrrRNrbRIqK/u+Pjl9fba8PHX7/HO6+3G5ulatrxCpazA5ui54+W14eSm29+k19uQ0dVsvsRlvsNNrbRCpayf2NyW1diM0dWGztOCzdF9y897x81iusBRrrRNrbRIqK9Cpax9y897x81xxstvxcpxw8lrwsdlvsNiusBatrxWs7pUsrhRrrRNrbRIqK9CpaxUUPCqAAAAaHRSTlMAERERESIiMzMzRERERERVVVVVZmZmd3d3d3d3d3eIiIiIiIiZmZmZmZmqqqqqqqqqqru7u7u7u7u7u8zMzMzMzMzM3d3d3d3d3d3d3e7u7u7u7u7u7u7u7v///////////////////5lRrH4AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDYvMDcvMTIXz7qOAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M0BrLToAAAAZxJREFUOI211GlXgkAUBmAqyFat1DZbtSxt1bKdLAoqw6WSlIZAQvH//4OGzWWCwS/dD56D5zmXue+dA0EMXgm+7VN8wnBxVQY+JatxCKt+zKgqhLBf8SaLKboMe0IIgLhA4WagkrClCd99ph1y4Af8DTLuAzNBk3ShoCDHZ60DHggI/BPRofXagIzAfiVy4MU+IMDB/N4uUIIDwPu6JgGBNNwICmHk9EPFhopk7K02B/8fRiGMnJrYKnW7llhJ4zOpYxTy7XpmlFirdNx6ATZV1AYKZSA39HFi34HnVzDYct4h/cNIryT1ZkPVWMDZkTsE8grx3Dv9UtUDggKxQ2ez1+yX9diSvKAcjG2uRidDJ2VzP0X2jr51D7yp/ahai5nahvIxPb+4EVvGbUb5nE6K+VCU1zWtib0UkjB2OsNo5pXCQiBdzNbsm4eHQGk5N9QHAgkMCIEHFL2ciMCchxRzCAyk3T8T6QACsfV/8NvHjTpQTpE4R15aEOai6rgPs65YaXLeS+nWE4QRznMrndS5iHGGsEfWPamHCeIX2E5ejXazVyAAAAAASUVORK5CYII=');
 }

@@ -1,0 +1,12 @@
+/* line 3, ../sass/border-radius.scss */
+#foo {
+    background: green;
+    color: #fff;
+    padding: 15px 10px;
+    width: 300px;
+    -webkit-border-radius: 20px 20px 0 0;
+    -moz-border-radius: 20px 20px 0 0;
+    -ms-border-radius: 20px 20px 0 0;
+    -o-border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0;
+}

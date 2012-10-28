@@ -1,7 +1,4 @@
 @import "compass";
-@import "compass/utilities/sprites";
-// 需要指定原始圖檔的路徑
-@import "player/*.png";
 /**/
 #media {
     background: pink;
@@ -19,6 +16,7 @@
     }
     li.photos span {
         // 請使用 @include <目錄名>-sprite(原始檔案名不含附檔名, ico_photos_default_small);
+        background: inline-image("../images/player/ico_photos_default_small.png");
     }
     li.music span {
         // 同上 ico_music_default_small

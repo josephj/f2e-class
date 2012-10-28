@@ -1,0 +1,41 @@
+/* line 3, ../sass/transition.scss */
+#foo {
+    background: green;
+    color: #fff;
+    padding: 15px 10px;
+    width: 300px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: #cccccc 5px 5px 10px;
+    -moz-box-shadow: #cccccc 5px 5px 10px;
+    box-shadow: #cccccc 5px 5px 10px;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.8)), color-stop(40%, rgba(255, 255, 255, 0.15)), color-stop(100%, transparent));
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.15) 40%, transparent);
+    background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.15) 40%, transparent);
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.15) 40%, transparent);
+    background-image: -ms-linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.15) 40%, transparent);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.15) 40%, transparent);
+    -webkit-transition-property: background;
+    -moz-transition-property: background;
+    -ms-transition-property: background;
+    -o-transition-property: background;
+    transition-property: background;
+    -webkit-transition-duration: 2s;
+    -moz-transition-duration: 2s;
+    -ms-transition-duration: 2s;
+    -o-transition-duration: 2s;
+    transition-duration: 2s;
+    -webkit-transition-timing-function: ease-in;
+    -moz-transition-timing-function: ease-in;
+    -ms-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+}
+
+/* line 16, ../sass/transition.scss */
+#foo:hover {
+    background: red;
+}

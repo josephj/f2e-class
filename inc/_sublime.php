@@ -70,7 +70,7 @@ print 'Please restart Sublime Text to finish installation'
                     </p>
                 </li>
                 <li>
-                    <em>LiveReload</em>
+                    <em>LiveReload - LiveReload 真棒</em>
                     <p>
                         當有檔案修改時、瀏覽器可以自動更新。 瀏覽器也需要安裝對應的外掛，例如 <a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei" target="_blank">Chrome</a>。
                         不過我在使用時不太聽話就是了 :p
