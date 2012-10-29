@@ -33,17 +33,22 @@ switch ($method)
         $result = json_encode(array("photo_id" => $data));
         break;
     case "upload":
-        if ($_FILES["file"]["error"] > 0)
+        //if ($_SERVER["REQUEST_METHOD"] == "OPTIONS")
+        //{
+	    header("Access-Control-Allow-Origin: *");
+        //}
+
+        if ($_FILES["Filedata"]["error"] > 0)
         {
-            $result = json_encode(array("error" => $_FILES["file"]["error"]));
+            $result = json_encode(array("error" => $_FILES["Filedata"]["error"]));
         }
         else
         {
             $title = getREQUEST("title");
             $description = getREQUEST("description");
             $tags = getREQUEST("tags");
-            $title = ($title) ? $title : $_FILES["file"]["name"];
-            $data = $f->sync_upload($_FILES["file"]["tmp_name"], $title, $description, $tags, 0, 0, 0);
+            $title = ($title) ? $title : $_FILES["Filedata"]["name"];
+            $data = $f->sync_upload($_FILES["Filedata"]["tmp_name"], $title, $description, $tags, 0, 0, 0);
             $photo_id = explode("-", $data);
             $photo_id = $photo_id[0];
             $f->photosets_addPhoto($photoset_id, $photo_id);
