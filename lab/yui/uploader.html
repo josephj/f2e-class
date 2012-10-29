@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>YUI - Uploader</title>
+<style type="text/css">
+#filenames {
+    margin-top: 15px;
+}
+</style>
+</head>
+<body class="yui3-skin-sam">
+
+    <div id="upload-form">
+        <div id="select-button-container"></div>
+        <div id="overall-progress"></div>
+        <table id="filenames">
+            <thead>
+                <tr>
+                    <th>檔案名稱</th>
+                    <th>檔案大小</th>
+                    <th>上傳進度</th>
+                </tr>
+                <tr id="nofiles">
+                    <td colspan="3">目前尚未有檔案上傳</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="http://yui.yahooapis.com/3.7.2/build/yui/yui-min.js"></script>
+    <script>
+    /*global YUI */
+    YUI().use("uploader", function (Y) {
+        "use strict";
+        // 若沒有安裝 Flash、也不支援 HTML5 上傳, 或者是 iOS 系統：一律不使用這個 Uploader
+        if (Y.Uploader.TYPE === "none" || Y.UA.ios) {
+            Y.one("#upload-form").set("text", "此瀏覽器無法使用 Uploade！");
+            return;
+        }
+        Y.log("瀏覽器所支援的 Uploader 類型為：" + Y.Uploader.TYPE);
+
+        var _progressNode = Y.one("#overall-progress"),
+            _uploader,
+            _isFinish  = false,
+            //==============
+            // 常數
+            //==============
+            SWF_URL    = "http://yui.yahooapis.com/3.7.3/build/uploader/assets/flashuploader.swf",
+            UPLOAD_URL = "http://f2eclass.com/service/?method=upload",
+            //===============
+            // 事件處理函式
+            //===============
+            _handleFileSelect,
+            _handleUploadStart,
+            _handleUploadButtonClick,
+            _handleUploadProgress,
+            _handleTotalUploadProgress,
+            _handleUploadComplete,
+            _handleAllUploadsComplete;
+
+        // Step 1 - 使用者選取好檔案之後、要將檔案資訊放入列表中
+        _handleFileSelect = function (e) {
+            Y.log("_handleFileSelect() is executed.");
+            var files     = e.fileList,
+                fileTable = Y.one("#filenames tbody");
+
+            if (files.length === 0 || !Y.one("#nofiles")) {
+                return;
+            }
+            Y.one("#nofiles").remove();
+            if (_isFinish) {
+                _isFinish = false;
+                fileTable.setHTML("");
+            }
+            Y.each(files, function (file) {
+                fileTable.append([
+                    '<tr id="' + file.get("id") + "_row" + '">',
+                    '    <td class="name">' + file.get("name") + '<\/td>',
+                    '    <td class="size">' + file.get("size") + '<\/td>',
+                    '    <td class="percent">此檔案尚未上傳<\/td>'
+                ].join(""));
+            });
+            if (!_isFinish && _uploader.get("fileList").length > 0) {
+                _uploader.uploadAll();
+            }
+        };
+
+        // 步驟 3 - 開始上傳：控制按鈕外觀及移除事件
+        _handleUploadStart = function (e) {
+            _uploader.set("enabled", false);
+        };
+
+        // 步驟 4 - 上傳中 (單一檔案) : 更新列表中的上傳進度
+        _handleUploadProgress = function (e) {
+            // Y.log("_handleUploadProgress() is executed.");
+            var row = Y.one("#" + e.file.get("id") + "_row");
+            row.one(".percent").set("text", e.percentLoaded + "%");
+        };
+
+        // 步驟 5 - 上傳中 (整體進度) : 更新整體上傳進度
+        _handleTotalUploadProgress = function (e) {
+            // Y.log("_handleTotalUploadProgress() is executed.");
+            _progressNode.setHTML("Total uploaded: <strong>" + e.percentLoaded + "%" + "<\/strong>");
+        };
+
+        // 步驟 6 - 單一檔案上傳完成 : 在列表上顯示上傳完畢
+        _handleUploadComplete = function (e) {
+            Y.log("_handleUploadComplete() is executed.");
+            var fileRow = Y.one("#" + e.file.get("id") + "_row");
+            fileRow.one(".percent").set("text", "上傳完畢");
+        };
+
+        // 步驟 7 - 所有檔案皆上傳完成 : 顯示訊息、處理按鈕與 Uploader 讓檔案可以再度上傳
+        _handleAllUploadsComplete = function (event) {
+            Y.log("_handleAllUploadsComplete() is executed.");
+            _uploader.set("enabled", true);
+            _uploader.set("fileList", []);
+            _progressNode.set("text", "全部檔案皆上傳完畢");
+            _isFinish = true;
+        };
+
+        // 建立 Uploader
+        _uploader = new Y.Uploader({
+            width           : "250px",      // 按鈕的寬
+            height          : "35px",       // 按鈕的高
+            multipleFiles   : true,         // 是否要上傳多個檔案
+            selectButtonLabel : "選取檔案", // 顯示在按鈕上的文字
+            swfURL          : SWF_URL,      // Flash 檔案所在位置（若支援 HTML5 就不會用到)
+            uploadURL       : UPLOAD_URL,   // 上傳的位置
+            simLimit        : 2,            // 同時上傳數量
+            withCredentials : false
+        });
+        // 將按鈕放入指定的 div 中
+        _uploader.render("#select-button-container");
+
+        // 步驟 1 - 使用者選取好檔案之後、要將檔案資訊放入列表中
+        _uploader.after("fileselect", _handleFileSelect);
+        // 步驟 2 - 開始上傳：控制按鈕外觀及移除事件
+        _uploader.on("uploadstart", _handleUploadStart);
+        // 步驟 3 - 上傳中 (單一檔案) : 更新列表中的上傳進度
+        _uploader.on("uploadprogress", _handleUploadProgress);
+        // 步驟 4 - 上傳中 (整體進度) : 更新整體上傳進度
+        _uploader.on("totaluploadprogress", _handleTotalUploadProgress);
+        // 步驟 5 - 單一檔案上傳完成 : 在列表上顯示上傳完畢
+        _uploader.on("uploadcomplete", _handleUploadComplete);
+        // 步驟 6 - 所有檔案皆上傳完成 : 顯示訊息、處理按鈕與 Uploader 讓檔案可以再度上傳
+        _uploader.on("alluploadscomplete", _handleAllUploadsComplete);
+    });
+    </script>
+</body>
+</html>
