@@ -5,7 +5,7 @@
             <h1>F2E 必備軟體</h1>
         </div>
         <div class="bd">
-            <ul>
+            <ul class="software-list">
                 <li>
                     <a href="http://sourceforge.net/projects/appserv/files/AppServ%20Open%20Project/" target="_blank">AppServ</a>
                     <p>提供網頁伺服器、資料庫、PHP 一次安裝完畢。安裝完畢後請以瀏覽器連到 <a href="http://localhost/" target="_blank">http://localhost</a></p>
@@ -41,6 +41,14 @@
                 <li>
                     <a href="http://www.google.com/intl/zh-TW/chrome/browser/" target="_blank">Google Chrome</a>
                     <p>大多數 F2E 開發人員都用此瀏覽器。我比較喜歡 Firefox 就是了 XD</p>
+                </li>
+                <li>
+                    <a href="http://www.sublimetext.com/2" target="_blank">Sublime Text 2</a>
+                    <p>近兩年來最夯的程式編輯器，免費且有一大堆 Plugin</p>
+                </li>
+                <li>
+                    <a href="http://winscp.net/eng/index.php" target="_blank">WinScp</a>
+                    <p>如果你有一台遠端的 Linux 需要做類似 FTP 的檔案傳輸，這是一個不錯的工具。</p>
                 </li>
             </ul>
         </div>
