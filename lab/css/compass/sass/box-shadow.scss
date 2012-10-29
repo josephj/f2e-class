@@ -6,5 +6,5 @@
     padding: 15px 10px;
     width: 300px;
     @include border-radius(20px);
-    @include box-shadow(#ccc 5px 5px 10px);
+    @include box-shadow(yellow 0 0 30px);
 }

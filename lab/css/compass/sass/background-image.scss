@@ -1,12 +1,17 @@
 @import "compass";
 
 #foo {
-    background: green;
+    background: red;
     color: #fff;
     padding: 15px 10px;
     width: 300px;
 //    border: solid 1px rgba(0, 0, 0, 1);
     @include border-radius(20px);
     @include box-shadow(#ccc 5px 5px 10px);
-    @include background-image(linear-gradient(rgba(255,255,255, 0.80) , rgba(255,255,255, 0.15) 40%, transparent));
+    @include background-image(
+    	linear-gradient(
+    		rgba(255,255,255, 0.80) , 
+    		rgba(255,255,255, 0.15) 40%, 
+    	transparent)
+    );
 }

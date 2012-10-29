@@ -3,68 +3,96 @@
 	{
 		"selected_items":
 		[
+			[
+				"create",
+				"createElement"
+			],
+			[
+				"background",
+				"background-position"
+			],
+			[
+				"hi",
+				"highlightButton"
+			],
+			[
+				"handle",
+				"handleResetClick"
+			],
+			[
+				"rese",
+				"resetButton"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"yui",
+				"yui3-menu-hidden"
+			],
+			[
+				"list-style",
+				"list-style-type"
+			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "lab/js/js-dom-access.html",
-			"settings":
-			{
-				"buffer_size": 1194,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/LiveReload/LiveReload.sublime-settings",
-			"settings":
-			{
-				"buffer_size": 235,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sass/_mastfoot.scss",
-			"settings":
-			{
-				"buffer_size": 246,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sass/_masthead.scss",
-			"settings":
-			{
-				"buffer_size": 246,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config.rb",
-			"settings":
-			{
-				"buffer_size": 821,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/Compass/Compass.sublime-build",
 	"command_palette":
 	{
-		"height": 71.0,
+		"height": 375.0,
 		"selected_items":
 		[
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				":6",
+				"Zen Coding: Endcode/decode base64"
+			],
 			[
 				"Install",
 				"Package Control: Install Package"
 			],
 			[
-				"Themr",
-				"Themr: Soda Light"
+				":1",
+				"Markdown Slideshow: I/O 2011 theme"
 			],
 			[
-				":w",
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				":",
 				":w - Save"
+			],
+			[
+				":2",
+				"Markdown Slideshow: I/O 2011 theme"
+			],
+			[
+				"set syntax:sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"syntax",
+				"Set Syntax: Sass"
+			],
+			[
+				"Themr",
+				"Themr: Soda Light"
 			],
 			[
 				"Enal",
@@ -87,7 +115,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 349.0
+		"width": 588.0
 	},
 	"console":
 	{
@@ -104,24 +132,80 @@
 	},
 	"file_history":
 	[
+		"/Users/joseph_chiang/class/inc/_relate_link.php",
+		"/Users/joseph_chiang/class/inc/_sublime.php",
+		"/Users/joseph_chiang/class/lab/css/compass-answer/auto-sprite.html",
+		"/Users/joseph_chiang/class/lab/css/compass/normal.html",
+		"/Users/joseph_chiang/class/lab/css/compass/sass/normal.scss",
+		"/Users/joseph_chiang/class/lab/css/compass/sass/basic-sprite.scss",
+		"/Users/joseph_chiang/class/lab/css/compass/sass/auto-sprite.scss",
+		"/Users/joseph_chiang/class/lab/css/compass/sass/border-radius.scss",
+		"/Users/joseph_chiang/class/lab/css/compass/sass/box-shadow.scss",
+		"/Users/joseph_chiang/class/lab/css/compass/sass/background-image.scss",
+		"/Users/joseph_chiang/class/lab/css/compass/sass/transition.scss",
+		"/Users/joseph_chiang/class/lab/js/undefined.html",
+		"/Users/joseph_chiang/class/lab/js/if-else-answer.html",
+		"/Users/joseph_chiang/class/lab/js/foreach.html",
+		"/Users/joseph_chiang/class/lab/js/dom-access.html",
+		"/Users/joseph_chiang/class/lab/js/dom-attribute.html",
+		"/Users/joseph_chiang/class/lab/js/dom-method.html",
+		"/Users/joseph_chiang/class/lab/js/dom-appendchild.html",
+		"/Users/joseph_chiang/class/lab/css/compass/images/player/ico_photos_default_small.png",
+		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/LiveReload/LiveReload.sublime-settings",
+		"/Users/joseph_chiang/class/lab/test.html",
+		"/Users/joseph_chiang/class/grid.html",
+		"/Users/joseph_chiang/class/lab/yui/anim.html",
+		"/Users/joseph_chiang/class/sass/_nav.scss",
+		"/Users/joseph_chiang/class/lab/js/js-dom-access.html",
+		"/Users/joseph_chiang/class/lab/js/dom-event.html",
+		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/User/Chrome.sublime-build",
+		"/Users/joseph_chiang/class/lab/css/grids.html",
+		"/Users/joseph_chiang/class/lab/css/compass.zip",
+		"/Users/joseph_chiang/class/lab/css/compass-answer/normal.html",
+		"/Users/joseph_chiang/class/lab/css/compass-answer/sass/normal.scss",
+		"/Users/joseph_chiang/class/lab/yui/module.html",
+		"/Users/joseph_chiang/class/.sass-cache/5c375d0c4246b5c8a2ebca8d5aa47f8e0b188442/_compass.scssc",
+		"/Users/joseph_chiang/class/lab/yui/node-event-answer.html",
+		"/Users/joseph_chiang/class/.sass-cache/4a89751382cc1805a647147555d78677cfbe3cf9/_color.scssc",
+		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/Users/joseph_chiang/class/lab/js/js-function.html",
+		"/Users/joseph_chiang/class/lab/js/type.html",
+		"/Users/joseph_chiang/class/lab/js/if-else.html",
+		"/Users/joseph_chiang/class/lab/js/closure.html",
+		"/Users/joseph_chiang/class/lab/js/undefined-2.html",
+		"/Users/joseph_chiang/class/inc/_nav.php",
+		"/Users/joseph_chiang/class/lab/js/hello.html",
+		"/Users/joseph_chiang/class/lab/js/hello-answer.html",
+		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/ZenCoding/zen-coding.sublime-settings",
+		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/Preview/Preview.sublime-settings",
+		"/Users/joseph_chiang/class/sass/_sublime.scss",
+		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/User/Preview.sublime-settings",
+		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/joseph_chiang/class/sass/class.scss",
+		"/Users/joseph_chiang/class/sass/_software.scss",
+		"/Users/joseph_chiang/class/sublime.php",
+		"/Users/joseph_chiang/class/software.php",
+		"/Users/joseph_chiang/class/inc/_software.php",
+		"/Users/joseph_chiang/class/agenda.html",
 		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/joseph_chiang/class/sass/_relate_link.scss",
+		"/Users/joseph_chiang/class/sass/_masthead.scss",
+		"/Users/joseph_chiang/class/sass/_mastfoot.scss",
+		"/Users/joseph_chiang/class/class.sublime-project",
+		"/Users/joseph_chiang/class/class.sublime-workspace",
+		"/Users/joseph_chiang/class/config.rb",
 		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
 		"/Users/joseph_chiang/class/memo.txt",
-		"/Users/joseph_chiang/class/agenda.html",
-		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
-		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
 		"/Users/joseph_chiang/class/album/inc/_masthead.php",
 		"/Users/joseph_chiang/class/album/notification.js",
 		"/Users/joseph_chiang/Desktop/test.html",
 		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/Git/Git.sublime-settings",
-		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/Preview/Preview.sublime-settings",
 		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
 		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/DetectSyntax/DetectSyntax.sublime-settings",
-		"/Users/joseph_chiang/class/sass/class.scss",
 		"/var/folders/c9/sxj8y7ws7430cvnk8v7k3yq80000gt/T/sublime-sftp-browse-1350641958/untitled/home/josephj/class/index.php",
 		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/User/sftp_servers/untitled",
 		"/Users/joseph_chiang/class/inc/_after_body.php",
-		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/ZenCoding/zen-coding.sublime-settings",
 		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/User/SFTP.sublime-settings",
 		"/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/ZenCoding/Default.sublime-keymap",
 		"/Users/joseph_chiang/class/index.php",
@@ -133,9 +217,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 95.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -143,18 +228,25 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"title",
+			"item",
+			"view_in",
+			";:w",
+			";",
+			"sass",
+			"syntax",
 			"detect_slow",
 			"super+space",
 			"key"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
 		],
-		"reverse": true,
+		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
@@ -163,158 +255,8 @@
 	"groups":
 	[
 		{
-			"selected": 4,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "lab/js/js-dom-access.html",
-					"settings":
-					{
-						"buffer_size": 1194,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								307,
-								307
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/LiveReload/LiveReload.sublime-settings",
-					"settings":
-					{
-						"buffer_size": 235,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "sass/_mastfoot.scss",
-					"settings":
-					{
-						"buffer_size": 246,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								153,
-								178
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "sass/_masthead.scss",
-					"settings":
-					{
-						"buffer_size": 246,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								52,
-								52
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "config.rb",
-					"settings":
-					{
-						"buffer_size": 821,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -324,7 +266,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 37.0
 	},
 	"layout":
 	{
@@ -351,7 +293,11 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 126.0
+		"height": 50.0
+	},
+	"output.jslint_result_view":
+	{
+		"height": 33.0
 	},
 	"output.sftp":
 	{
@@ -367,6 +313,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"24",
+				".sass-cache/5c375d0c4246b5c8a2ebca8d5aa47f8e0b188442/_compass.scssc"
+			],
+			[
+				"42",
+				".sass-cache/4a89751382cc1805a647147555d78677cfbe3cf9/_color.scssc"
+			]
 		],
 		"width": 0.0
 	},
@@ -375,13 +329,17 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"/Users/joseph_chiang/class/class.sublime-project"
+			]
 		],
 		"width": 380.0
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 173.0,
 	"status_bar_visible": true
 }

@@ -9,7 +9,7 @@
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
     border-radius: 20px;
-    -webkit-box-shadow: #cccccc 5px 5px 10px;
-    -moz-box-shadow: #cccccc 5px 5px 10px;
-    box-shadow: #cccccc 5px 5px 10px;
+    -webkit-box-shadow: yellow 0 0 30px;
+    -moz-box-shadow: yellow 0 0 30px;
+    box-shadow: yellow 0 0 30px;
 }
