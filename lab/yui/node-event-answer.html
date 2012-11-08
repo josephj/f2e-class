@@ -2,12 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="author" content="josephj">
-<meta name="created" content="2012-10-11">
-<title>YUI - node / event</title>
-<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.2/build/cssreset/reset-min.css">
-<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.2/build/cssfonts/fonts-min.css">
-<script type="text/javascript" src="http://yui.yahooapis.com/3.7.2/build/yui/yui-min.js"></script>
+<title>YUI - Node / Event</title>
 <style type="text/css">
 .highlighted {
     background: yellow;
@@ -15,6 +10,8 @@
 </style>
 </head>
 <body>
+    <h1>YUI - Node / Event</h1>
+    <p>點一下會 highlight、DoubleClick 會做刪除</p>
     <div id="article">
         <h1>新店市好吃的餐廳</h1>
         <ul class="restaurant">
@@ -52,7 +49,7 @@
         // 步驟 3 - 點 2 下刪除節點，同步驟 2 將事件指定為 dblclick
         Y.delegate("dblclick", function (e) {
 
-            // 步驟 3.1 - 可以利用 window.confirm (會依使用者回答回傳 true 或 false)
+            // 步驟 3.1 - 可以利用 window.confirm 會依使用者回答回傳 true 或 false)
             if (window.confirm("您確定要刪除此節點嗎？")) {
                 // 步驟 3.2 - 用 this 取得目前的參考
                 var node = this;

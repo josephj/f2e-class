@@ -1,6 +1,5 @@
 /*global YUI */
 YUI().use("handlebars", "uploader", function (Y) {
-    "use strict";
 
     // 若沒有安裝 Flash、也不支援 HTML5 上傳, 或者是 iOS 系統：一律不使用這個 Uploader
     if (Y.Uploader.TYPE === "none" || Y.UA.ios) {
@@ -18,7 +17,7 @@ YUI().use("handlebars", "uploader", function (Y) {
         // 常數
         //==============
         SWF_URL    = "http://yui.yahooapis.com/3.7.3/build/uploader/assets/flashuploader.swf",
-        UPLOAD_URL = "/service/?method=upload",
+        UPLOAD_URL = "uploader.php",
         //===============
         // 事件處理函式
         //===============
@@ -60,13 +59,15 @@ YUI().use("handlebars", "uploader", function (Y) {
             }));
         });
         if (!_isFinish && _uploader.get("fileList").length > 0) {
-            _uploader.uploadAll();
+            _uploader.set("enabled", false);
+            Y.later(1000, null, function () {
+                _uploader.uploadAll();
+            });
         }
     };
 
     // 步驟 3 - 開始上傳：控制按鈕外觀及移除事件
     _handleUploadStart = function (e) {
-        _uploader.set("enabled", false);
     };
 
     // 步驟 4 - 上傳中 (單一檔案) : 更新列表中的上傳進度
@@ -107,6 +108,7 @@ YUI().use("handlebars", "uploader", function (Y) {
         swfURL            : SWF_URL,    // Flash 檔案所在位置（若支援 HTML5 就不會用到)
         uploadURL         : UPLOAD_URL, // 上傳的位置
         simLimit          : 2,          // 同時上傳數量
+        fileFieldName     : "file",
         withCredentials   : false
     });
     // 將按鈕放入指定的 div 中

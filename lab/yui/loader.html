@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>YUI - 觀看 YUI 是怎麼載入模組的</title>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+    <h1>YUI - 觀看 YUI 是怎麼載入模組的</h1>
+    <p>這個練習只要按 F12、選取 Network (網路) 觀看 YUI 的 request 即可</p>
+
+    <script type="text/javascript" src="http://yui.yahooapis.com/3.7.3/build/yui/yui-min.js"></script>
+    <script>
+    YUI().use("datatable", function (Y) {
+        Y.log(Y.DataTable);
+        alert("已經載入 datatable 模組");
+    });
+    </script>
+</body>
+</html>

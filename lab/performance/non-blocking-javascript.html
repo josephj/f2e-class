@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Performance - 外部 JavaScript 會阻塞內容呈現</title>
+<style>
+em {
+    font-style: normal;
+    color: red;
+}
+</style>
+</head>
+<body>
+    <h1>Performance - 外部 JavaScript 會阻塞內容呈現</h1>
+    <p>以下有一個跑很慢的<a href="blocking-javascript.phps" target="_blank">外部 JavaScript</a>、它會堵塞其下面原始碼的呈現... 需要改為非堵塞的載入機制。</p>
+
+    <!-- 目標：請將 blocking-javascript.php 這個得讀取很久的 JavaScript 改用無堵塞的方式載入 -->
+    <script src="blocking-javascript.php"></script>
+
+    <hr>
+    <h1>Non-blocking 載入 JavaScript</h1>
+    <p>Y!Slow（關於前端效能優化）的 Best Practice 有一則是 <a href="http://developer.yahoo.com/performance/rules.html#js_bottom" target="_blank">Put Scripts at the bottom</a>、簡略地講就是要<em>將外部 JavaScript 放在原始碼最下方，等待網頁完全載入後才執行</em>。主要的原因是：<em>當瀏覽器讀取到外部 JavaScript 或 CSS 標籤時，皆會佔住整個網頁的下載流程</em>（不過這點在像 Chrome 等較新的瀏覽器已經有所改進了）、而不是像其他元件可以同時平行下載。另外的原因就是 JavaScript 通常得跟 DOM 物件互動、太早載入沒有幫助。</p>
+    <h2>將 JavaScript 放在最下方的缺點</h2>
+    <p>我們的網站也是將  JavaScript 放在最下方，雖然不會阻擋到其他元件的下載，但是缺點就是這些功能<em>使用者看到的第一時間沒辦法使用</em>、以及有時<em>畫面會閃一下（漸進式支援）</em>。想到多重兼顧（無障礙、視覺、效能、使用性）的解決方案並不容易、有時還可能會被 QA 認為是 Bug :p </p>
+    <h2>用 Unblock 的方式載入</h2>
+    <p>
+        大陸的同事建議採用 Unblock 載入 JavaScript 的方式，也就是將原本放在 &lt;/body&gt; 前的：
+        <code>&lt;script src="外部 JS 檔">&lt;/script&gt;</code>
+        拿到 &lt;/head&gt; 前改為：
+        <pre style="margin-bottom: 10px"><code>&lt;script&gt;
+(function(){
+    var scriptEl   = document.createElement("script");
+    scriptEl.src   = "外部 JS 檔";
+    scriptEl.type  = "text/javascript";
+    scriptEl.async = true;
+    document.getElementsByTagName("head")[0].appendChild(scriptEl);
+}());
+&lt;/script&gt;</code></pre>
+    </p>
+    <p>
+        這樣做就<em>避掉了不會有擋住其他元件下載的問題、也可以讓 JavaScript 盡早執行</em>。
+        視覺、效能、使用性都獲得了很大的改善（主要是使用者的感受、比較難用數據或截圖表達 :p）。
+        技術很簡單、只是不知道之前自己為啥都沒有想到過（太笨啦 XD）。
+        這個作法讓我們<em>可以兼顧效能、無障礙與使用性</em>，小巧簡單卻是很棒的作法！
+    </p>
+</body>
+</html>

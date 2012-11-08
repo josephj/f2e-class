@@ -11,26 +11,27 @@
     <p>目的：了解 YUI 的模組架構是怎麼樣運作的。</p>
 
     <script>
-    // Step 1 - 建立 class 這個模組，有一些關於前端工程實務訓練的基本資訊
+    // 一個既有模組 class，有一些關於前端工程實務訓練的基本資訊
+    // 但未定義有哪些學生
     YUI.add("class", function (Y) {
         Y.Class = {
-            students: []
+            name : "前端工程實務訓練",
+            hours : 24,
+            students: [],
+            teacher: "josephj",
+            getStudents: function () {
+                return this.students.join(",")
+            }
         };
     }, "0.0.1");
 
-    // Step 2 - 建立 fitpi，針對 class 模組做一些修改
-    YUI.add("fitpi", function (Y) {
-        Y.Class.students = [
-        ];
-    }, "0.0.1", {requires:["class"]});
+    // Step 1 - 建立 fitpi、需設定相依模組 (requires) 為 class 模組
+    //          並針對 Y.Class.students 寫入同學名稱
 
     // 注意：理論上 class 與 fitpi 都會是獨立的一支檔案。
 
-    // Step 3 - 使用時就只要指定 fitpi 即可，不需要指定 class 模組
-    YUI().use("fitpi", function (Y) {
-        // 請使用你建立的 getStudents 方法
-        // Y.Class.getStudents();
-    });
+    // Step 2 - 使用 YUI().use 載入 fitpi 模組，
+    //          並呼叫 Y.Class.getStudents 方法顯示 (alert) 同學列表
 
     </script>
 </body>

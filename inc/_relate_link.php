@@ -223,8 +223,21 @@ $data = array(
                 "answer" => FALSE,
             ),
             array(
+                "text" => "練習：YUI 模組",
+                "href" => "lab/yui/module.html",
+            ),
+            array(
+                "text" => "練習：YUI Loader",
+                "href" => "lab/yui/loader.html",
+                "answer" => FALSE,
+            ),
+            array(
                 "text" => "練習：YUI Node",
                 "href" => "lab/yui/node.html",
+            ),
+            array(
+                "text" => "練習：YUI Node (2)",
+                "href" => "lab/yui/node2.html",
             ),
             array(
                 "text" => "練習：YUI Note + Event",
@@ -252,41 +265,8 @@ $data = array(
             ),
         ),
     ),
-    "yui-advance" => array(
-        "text" => "功力大增 - YUI",
-        "slide_id" => "14721701",
-        "items" => array(
-            array(
-                "text" => "載入投影片(同上一堂課)",
-                "id"   => "14721701",
-                "href" => "http://www.slideshare.net/secret/FA2dV3uwmXtkwb",
-                "class" => "slide-link",
-                "answer" => FALSE,
-            ),
-            array(
-                "text" => "練習：Y.jsonp",
-                "href" => "lab/yui/jsonp.html",
-            ),
-            array(
-                "text" => "練習：Y.io",
-                "href" => "lab/yui/io.html",
-            ),
-            array(
-                "text" => "練習：Y.MenuNav",
-                "href" => "lab/yui/menunav.html",
-            ),
-            array(
-                "text" => "練習：Y.Button",
-                "href" => "lab/yui/button.html",
-            ),
-            array(
-                "text" => "練習：Y.Panel",
-                "href" => "lab/yui/panel.html",
-            ),
-        ),
-    ),
     "debugging" => array(
-        "text" => "自我省視 - Debug / Performance",
+        "text" => "自我省視 - Debug",
         "slide_id" => "14768361",
         "items" => array(
             array(
@@ -300,6 +280,37 @@ $data = array(
                 "text" => "Chrome Develoepr 的 Breakpoints 教學",
                 "href" => "https://developers.google.com/chrome-developer-tools/docs/scripts-breakpoints",
                 "answer" => FALSE,
+            ),
+        ),
+    ),
+    "performance" => array(
+        "text" => "行雲流水 - Performance",
+        "slide_id" => "15081163",
+        "items" => array(
+            array(
+                "text" => "載入投影片",
+                "id"   => "15081163",
+                "href" => "#show-slide",
+                "class" => "slide-link",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "外部 JavaScript 會阻塞內容呈現",
+                "href" => "/performance/blocking-javascript.html",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "外部 JavaScript 會阻塞內容呈現 - 外部檔案內容",
+                "href" => "/performance/blocking-javascript.phps",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "練習：非堵塞 JavaScript 的作法",
+                "href" => "/performance/non-blocking-javascript.html",
+            ),
+            array(
+                "text" => "練習：用 Y.ImageLoader 延遲圖片載入",
+                "href" => "lab/yui/imageloader.phps",
             ),
         ),
     ),
@@ -370,5 +381,5 @@ $data = array(
 <?php endforeach; ?>
         </div>
     </div>
-</div>
+</ div>
 <!-- #relate-link 相關連結模組 (結束) -->
