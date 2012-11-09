@@ -35,7 +35,7 @@ switch ($method)
     case "upload":
         //if ($_SERVER["REQUEST_METHOD"] == "OPTIONS")
         //{
-	    header("Access-Control-Allow-Origin: *");
+            header("Access-Control-Allow-Origin: *");
         //}
 
         if ($_FILES["Filedata"]["error"] > 0)
@@ -57,8 +57,12 @@ switch ($method)
         break;
     case "getPhotoList":
     default:
-        $data = $f->photosets_getPhotos($photoset_id, "url_m,url_o,tags,date_taken", NULL, 100, 1);
-        $photos = $data["photoset"]["photo"];
+        $data = $f->people_getPhotos("me", array(
+            "extras"   => "url_c,url_m,url_o,tags,date_taken",
+            "per_page" => 100,
+            "page"     => 1,
+        ));
+        $photos = $data["photos"]["photo"];
         $result = json_encode($photos);
         break;
 }
