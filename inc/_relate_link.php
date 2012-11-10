@@ -257,7 +257,7 @@ $data = array(
             ),
             array(
                 "text" => "練習：Y.Handlebars",
-                "href" => "lab/yui/handlebars",
+                "href" => "lab/yui/handlebars.html",
             ),
             array(
                 "text" => "練習：Y.Panel",

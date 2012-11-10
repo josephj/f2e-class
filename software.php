@@ -8,6 +8,7 @@
         <div id="yui-main">
             <div class="yui-b">
 <?php include_once "inc/_software.php"; ?>
+老闆用
             </div>
         </div>
     </div>

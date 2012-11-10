@@ -1,0 +1,11 @@
+<div id="foo"></div>
+<script>
+function getData(o) {
+	for (var i = o.items.length - 1; i >= 0; i--) {
+		document.getElementById("foo").innerHTML += o.items[i].description;
+	};
+
+}
+</script>
+<script src="http://api.flickr.com/services/feeds/geo/?tags=keroro&lang=en-us&format=json&jsoncallback=getData"></script>
+
