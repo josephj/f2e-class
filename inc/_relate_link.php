@@ -305,6 +305,16 @@ $data = array(
                 "answer" => FALSE,
             ),
             array(
+                "text" => "下載 Mini",
+                "href" => "https://github.com/josephj/mini/archive/master.zip",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "下載 Minify",
+                "href" => "https://github.com/mrclay/minify/archive/master.zip",
+                "answer" => FALSE,
+            ),
+            array(
                 "text" => "外部 JavaScript 會阻塞內容呈現",
                 "href" => "/performance/blocking-javascript.html",
                 "answer" => FALSE,
@@ -323,20 +333,8 @@ $data = array(
                 "href" => "lab/yui/imageloader.phps",
             ),
             array(
-                "text" => "載入投影片",
-                "id"   => "15081163",
-                "href" => "#show-slide",
-                "class" => "slide-link",
-                "answer" => FALSE,
-            ),
-            array(
-                "text" => "下載 Mini",
-                "href" => "https://github.com/josephj/mini/archive/master.zip",
-                "answer" => FALSE,
-            ),
-            array(
-                "text" => "下載 Minify",
-                "href" => "https://github.com/mrclay/minify/archive/master.zip",
+                "text" => "測試用 JavaScript 與 CSS 下載",
+                "href" => "/performace/files.zip",
                 "answer" => FALSE,
             ),
         ),
