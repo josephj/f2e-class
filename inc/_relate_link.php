@@ -282,7 +282,7 @@ $data = array(
                 "answer" => FALSE,
             ),
             array(
-                "text" => "在 Fiddler 塞入 Firebug 所需程式碼",
+                "text" => "練習：以 Fiddler 塞入 Firebug",
                 "href" => "/debug/fiddler-firebug.txt",
                 "answer" => FALSE,
             ),
