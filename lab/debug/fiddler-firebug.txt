@@ -1,0 +1,22 @@
+以下兩行塞在 Class Handler {} 的開頭中：
+
+public static RulesOption("Enable Firebug Lite")
+var IS_INCLUDE_FIREBUG: boolean = false;
+
+以下塞在 static function OnBeforeResponse(oSession: Session) {} 事件處理函式的最後方：
+
+oSession.utilDecodeResponse();
+if (
+    oSession.responseCode == 200 &&
+    oSession.oResponse.headers.ExistsAndContains("Content-Type", "html") &&
+    oSession.utilFindInResponse("<body", false) > -1
+) {
+    var enc = Utilities.getResponseBodyEncoding(oSession);
+    var oBody = enc.GetString(oSession.responseBodyBytes);
+    var oRegEx = /<(body[^>]*)>/;
+
+    aHtml = '<script src="https://getfirebug.com/firebug-lite.js"></script>';
+    oBody = oBody.replace(oRegEx, '<$1>\n' + aHtml.join("\n"));
+    oSession.responseBodyBytes = enc.GetBytes(oBody);
+    oSession.utilSetResponseBody(oBody);
+}
