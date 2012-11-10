@@ -277,6 +277,16 @@ $data = array(
                 "answer" => FALSE,
             ),
             array(
+                "text" => "練習：Y.Console",
+                "href" => "/debug/console.html",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "在 Fiddler 塞入 Firebug 所需程式碼",
+                "href" => "/debug/fiddler-firebug.txt",
+                "answer" => FALSE,
+            ),
+            array(
                 "text" => "Chrome Develoepr 的 Breakpoints 教學",
                 "href" => "https://developers.google.com/chrome-developer-tools/docs/scripts-breakpoints",
                 "answer" => FALSE,
@@ -328,9 +338,16 @@ $data = array(
         ),
     ),
     "html5" => array(
-        "text"  => "放眼未來 - HTML5",
-        "slide_id" => "14734167",
+        "text"  => "放眼未來 - 新的技術",
+        "slide_id" => "15092702",
         "items" => array(
+            array(
+                "text" => "載入投影片",
+                "id"   => "15092702",
+                "href" => "#show-slide",
+                "class" => "slide-link",
+                "answer" => FALSE,
+            ),
         ),
     ),
 );
@@ -381,5 +398,6 @@ $data = array(
 <?php endforeach; ?>
         </div>
     </div>
-</ div>
+</div>
+</div>
 <!-- #relate-link 相關連結模組 (結束) -->

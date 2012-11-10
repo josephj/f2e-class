@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>YUI - Console</title>
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.3/build/cssreset/reset-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.3/build/cssfonts/fonts-min.css">
+<style type="text/css">
+#photo {
+    margin-bottom:10px;
+}
+#photo h2 {
+    margin-bottom:10px;
+    font-weight:bold;
+    font-size:123.1%;
+}
+#photo ul {
+    zoom:1;
+}
+#photo ul:after {
+    content:'';
+    display:block;
+    clear:both;
+}
+#photo li {
+    float:left;
+    margin:0 5px 5px 0;
+}
+</style>
+<script type="text/javascript" src="http://yui.yahooapis.com/3.7.3/build/yui/yui-min.js"></script>
+<script type="text/javascript">
+// Step 1 - 請在 use 中加入 console 模組
+YUI().use("console", "jsonp", "event-base", "node-base", function (Y) {
+
+    // Step 2 - 請替 body 加上 yui3-skin-sam 的 class (待會 Console 的樣式才能正確顯示)
+    Y.one("body").addClass("yui3-skin-sam");
+
+    // Step 3 - 請在這邊 new 一個 Y.Console
+    (new Y.Console({})).render();
+
+    // 以下是我們先前做的 JSONP 範例的原始碼
+    var callback, handleClick;
+    callback = function (data) {
+        // Step 4 - 加上 Y.log(msg, severity, group);
+        Y.log("callback() is executed.", "info", "#photo");
+        var items    = data.photos.photo,
+            module   = Y.one("#photo"),
+            bodeNode = module.one(".bd"),
+            html = [];
+
+        html.push('<ul class="clearfix">');
+        Y.each(items, function (item) {
+            var src, link;
+            src  = [
+                "http://farm" + item.farm + ".static.flickr.com/",
+                item.server + "/",
+                item.id + "_" + item.secret +"_s.jpg"
+            ].join("");
+            link = "http://www.flickr.com/photos/" + item.owner + "/" + item.id;
+            html.push([
+                "<li>",
+                    '<a href="' + link + '" title="' + item.title + '">',
+                        '<img src="' + src + '">',
+                    "</a>",
+                "</li>"
+            ].join(""));
+        });
+        html.push("</ul>");
+        bodeNode.setContent(html.join(""));
+    };
+    handleClick = function (e) {
+        // Step 4 - 加上 Y.log(msg, severity, group);
+        Y.log("handleClick() is executed.", "info", "#photo");
+        e.preventDefault();
+        var url = [
+            "http://api.flickr.com/services/rest/?",
+            "method=flickr.photos.search&",
+            "api_key=d498ec869768ecea276a7cb3906241d9&",
+            "tags=" + encodeURIComponent(Y.one("input").get("value")) + "&",
+            "per_page=100&",
+            "sort=interestingness-desc&",
+            "format=json&",
+            "jsoncallback={callback}"
+        ].join("");
+        Y.jsonp(url, callback);
+    };
+    Y.one(".view-link").on("click", handleClick);
+});
+</script>
+</head>
+<body>
+    <h1>練習加入 Console</h1>
+    <div id="photo">
+        <div class="hd">
+            <h2>相關照片</h2>
+        </div>
+        <div class="bd">
+            <input type="text" name="tag" value="miiiCasa">
+            <a href="http://www.flickr.com/photos/tags/nctu/interesting/" class="view-link">觀看照片</a>
+        </div>
+    </div>
+</body>
+</html>
