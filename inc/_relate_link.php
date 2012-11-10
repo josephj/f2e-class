@@ -322,6 +322,23 @@ $data = array(
                 "text" => "練習：用 Y.ImageLoader 延遲圖片載入",
                 "href" => "lab/yui/imageloader.phps",
             ),
+            array(
+                "text" => "載入投影片",
+                "id"   => "15081163",
+                "href" => "#show-slide",
+                "class" => "slide-link",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "下載 Mini",
+                "href" => "https://github.com/josephj/mini/archive/master.zip",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "下載 Minify",
+                "href" => "https://github.com/mrclay/minify/archive/master.zip",
+                "answer" => FALSE,
+            ),
         ),
     ),
     "nodejs" => array(
