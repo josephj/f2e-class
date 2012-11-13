@@ -7,6 +7,9 @@ $method   = getREQUEST("method");
 $callback = getREQUEST("callback");
 $redirect = getREQUEST("redirect");
 $format   = getREQUEST("format");
+$page     = getREQUEST("page", 1);
+$page     = intval($page);
+$page     = ($page === 0) ? 1 : $page;
 
 $f = new phpFlickr("2070c8ac214487572681a57a0b7d3e40", "67794c1d44a9fc7e");
 $f->setToken("72157631752899669-3729349dd1b76f08");
@@ -35,20 +38,20 @@ switch ($method)
     case "upload":
         //if ($_SERVER["REQUEST_METHOD"] == "OPTIONS")
         //{
-	    header("Access-Control-Allow-Origin: *");
+            header("Access-Control-Allow-Origin: *");
         //}
 
-        if ($_FILES["Filedata"]["error"] > 0)
+        if ($_FILES["file"]["error"] > 0)
         {
-            $result = json_encode(array("error" => $_FILES["Filedata"]["error"]));
+            $result = json_encode(array("error" => $_FILES["file"]["error"]));
         }
         else
         {
             $title = getREQUEST("title");
             $description = getREQUEST("description");
             $tags = getREQUEST("tags");
-            $title = ($title) ? $title : $_FILES["Filedata"]["name"];
-            $data = $f->sync_upload($_FILES["Filedata"]["tmp_name"], $title, $description, $tags, 0, 0, 0);
+            $title = ($title) ? $title : $_FILES["file"]["name"];
+            $data = $f->sync_upload($_FILES["file"]["tmp_name"], $title, $description, $tags, 0, 0, 0);
             $photo_id = explode("-", $data);
             $photo_id = $photo_id[0];
             $f->photosets_addPhoto($photoset_id, $photo_id);
@@ -57,7 +60,7 @@ switch ($method)
         break;
     case "getPhotoList":
     default:
-        $data = $f->photosets_getPhotos($photoset_id, "url_m,url_o,tags,date_taken", NULL, 100, 1);
+        $data = $f->photosets_getPhotos($photoset_id, "url_m,url_o,tags,date_taken", NULL, 100, $page);
         $photos = $data["photoset"]["photo"];
         $result = json_encode($photos);
         break;
