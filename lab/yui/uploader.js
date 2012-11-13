@@ -37,7 +37,7 @@ YUI().use("handlebars", "uploader", function (Y) {
     _template = Y.one("#template-item").getHTML();
     _template = Y.Handlebars.compile(_template);
 
-    // Step 1 - 使用者選取好檔案之後、要將檔案資訊放入列表中
+    // 步驟 1 - 使用者選取好檔案之後、要將檔案資訊放入列表中
     _handleFileSelect = function (e) {
         Y.log("_handleFileSelect() is executed.");
         var files     = e.fileList,
@@ -66,31 +66,31 @@ YUI().use("handlebars", "uploader", function (Y) {
         }
     };
 
-    // 步驟 3 - 開始上傳：控制按鈕外觀及移除事件
+    // 步驟 2 - 開始上傳：控制按鈕外觀及移除事件
     _handleUploadStart = function (e) {
     };
 
-    // 步驟 4 - 上傳中 (單一檔案) : 更新列表中的上傳進度
+    // 步驟 3 - 上傳中 (單一檔案) : 更新列表中的上傳進度
     _handleUploadProgress = function (e) {
         Y.log("_handleUploadProgress() is executed.");
         var row = Y.one("#" + e.file.get("id") + "_row");
         row.one(".percent").set("text", e.percentLoaded + "%");
     };
 
-    // 步驟 5 - 上傳中 (整體進度) : 更新整體上傳進度
+    // 步驟 4 - 上傳中 (整體進度) : 更新整體上傳進度
     _handleTotalUploadProgress = function (e) {
         Y.log("_handleTotalUploadProgress() is executed.");
-        _uploader.set("selectButtonLabel", "上傳中... (" + e.percentLoaded + "%)");
+        _uploader.set("selectButtonLabel", "上傳中 (" + e.percentLoaded + "%)");
     };
 
-    // 步驟 6 - 單一檔案上傳完成 : 在列表上顯示上傳完畢
+    // 步驟 5 - 單一檔案上傳完成 : 在列表上顯示上傳完畢
     _handleUploadComplete = function (e) {
         Y.log("_handleUploadComplete() is executed.");
         var fileRow = Y.one("#" + e.file.get("id") + "_row");
         fileRow.one(".percent").set("text", "上傳完畢");
     };
 
-    // 步驟 7 - 所有檔案皆上傳完成 : 顯示訊息、處理按鈕與 Uploader 讓檔案可以再度上傳
+    // 步驟 6 - 所有檔案皆上傳完成 : 顯示訊息、處理按鈕與 Uploader 讓檔案可以再度上傳
     _handleAllUploadsComplete = function (event) {
         Y.log("_handleAllUploadsComplete() is executed.");
         _uploader.set("enabled", true);
@@ -101,7 +101,7 @@ YUI().use("handlebars", "uploader", function (Y) {
 
     // 建立 Uploader
     _uploader = new Y.Uploader({
-        width             : "250px",    // 按鈕的寬
+        width             : "200px",    // 按鈕的寬
         height            : "35px",     // 按鈕的高
         multipleFiles     : true,       // 是否要上傳多個檔案
         selectButtonLabel : "上傳檔案", // 顯示在按鈕上的文字
