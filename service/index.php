@@ -32,8 +32,8 @@ switch ($method)
         fclose($fp);
         $data = $f->sync_upload("tmp/$filename", $title, $description, $tags, 0, 0, 0);
         $f->photosets_addPhoto($photoset_id, $data);
-        // $f->photosets_reoderPhotos($photoset_id, "$data");
-        $result = json_encode(array("photo_id" => $data));
+        $data = $f->photos_getInfo($photo_id);
+        $result = json_encode($data["photo"]);
         break;
     case "upload":
         //if ($_SERVER["REQUEST_METHOD"] == "OPTIONS")
@@ -55,7 +55,8 @@ switch ($method)
             $photo_id = explode("-", $data);
             $photo_id = $photo_id[0];
             $f->photosets_addPhoto($photoset_id, $photo_id);
-            $result = json_encode(array("photo_id" => $data));
+            $data = $f->photos_getInfo($photo_id);
+            $result = json_encode($data["photo"]);
         }
         break;
     case "getPhotoList":
