@@ -29,8 +29,8 @@ switch ($method)
         fclose($fp);
         $data = $f->sync_upload("tmp/$filename", $title, $description, $tags, 0, 0, 0);
         $f->photosets_addPhoto($photoset_id, $data);
-        // $f->photosets_reoderPhotos($photoset_id, "$data");
-        $result = json_encode(array("photo_id" => $data));
+        $data = $f->photos_getInfo($photo_id);
+        $result = json_encode($data["photo"]);
         break;
     case "upload":
         //if ($_SERVER["REQUEST_METHOD"] == "OPTIONS")
@@ -38,21 +38,22 @@ switch ($method)
             header("Access-Control-Allow-Origin: *");
         //}
 
-        if ($_FILES["Filedata"]["error"] > 0)
+        if ($_FILES["file"]["error"] > 0)
         {
-            $result = json_encode(array("error" => $_FILES["Filedata"]["error"]));
+            $result = json_encode(array("error" => $_FILES["file"]["error"]));
         }
         else
         {
             $title = getREQUEST("title");
             $description = getREQUEST("description");
             $tags = getREQUEST("tags");
-            $title = ($title) ? $title : $_FILES["Filedata"]["name"];
-            $data = $f->sync_upload($_FILES["Filedata"]["tmp_name"], $title, $description, $tags, 0, 0, 0);
+            $title = ($title) ? $title : $_FILES["file"]["name"];
+            $data = $f->sync_upload($_FILES["file"]["tmp_name"], $title, $description, $tags, 0, 0, 0);
             $photo_id = explode("-", $data);
             $photo_id = $photo_id[0];
             $f->photosets_addPhoto($photoset_id, $photo_id);
-            $result = json_encode(array("photo_id" => $data));
+            $data = $f->photos_getInfo($photo_id);
+            $result = json_encode($data["photo"]);
         }
         break;
     case "getPhotoList":
