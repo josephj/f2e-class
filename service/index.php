@@ -31,6 +31,8 @@ switch ($method)
         curl_close($ch);
         fclose($fp);
         $data = $f->sync_upload("tmp/$filename", $title, $description, $tags, 0, 0, 0);
+        $photo_id = explode("-", $data);
+        $photo_id = $photo_id[0];
         $f->photosets_addPhoto($photoset_id, $data);
         $data = $f->photos_getInfo($photo_id);
         $result = json_encode($data["photo"]);

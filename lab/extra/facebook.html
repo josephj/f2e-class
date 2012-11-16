@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Facebook 範例</title>
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.2/build/cssreset/reset-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.2/build/cssfonts/fonts-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.2/build/cssbase/base-min.css">
+<style type="text/css">
+body {
+    padding: 10px;
+}
+li {
+    list-style: none;
+    float: left;
+    margin: 0 5px 5px 0;
+}
+</style>
+</head>
+<body>
+    <h1>Facebook 範例</h1>
+    <p>參考文章：Facebook Developer 上的 <a href="http://developers.facebook.com/docs/reference/javascript/" target="_blank">JavaScript SDK</a></p>
+    <div id="fb-root"></div>
+    <script>
+    // 直接從 FB 上 Copy / Paste 的程式碼，會動態載入 FB 的函式庫
+    (function (d, debug) {
+        var js, id = "facebook-jssdk", ref = d.getElementsByTagName("script")[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement("script"); js.id = id; js.async = true;
+        js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+        ref.parentNode.insertBefore(js, ref);
+    }(document, /*debug*/ false));
+
+    // 當 FB 函式庫載入完畢:
+    window.fbAsyncInit = function () {
+
+        // API 請求 1：取得 easyoga.cn 粉絲專頁的所有相簿
+        FB.api("/easyoga.cn/albums", function (response) {
+            // 取得第一本相簿
+            var albumId = response.data[0].id;
+            // API 請求 2 : 取得第一本相簿的所有照片
+            FB.api("/" + albumId + "/photos", function (response) {
+                var photos, // 從 Facebook 取得的照片集合
+                    listEl, // UL 標籤參考
+                    itemEl,
+                    i;
+
+                // 在 UL 中塞入照片
+                photos = response.data;
+                listEl = document.getElementById("photo-list");
+                for (i in photos) {
+                    itemEl = document.createElement("li");
+                    itemEl.innerHTML = '<img src="' + photos[i]["images"][6].source + '">';
+                    listEl.appendChild(itemEl);
+                }
+            });
+        });
+    };
+    </script>
+
+    <hr>
+    <ul id="photo-list"></ul>
+
+</body>
+</html>
