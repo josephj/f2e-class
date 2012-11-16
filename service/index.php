@@ -7,6 +7,9 @@ $method   = getREQUEST("method");
 $callback = getREQUEST("callback");
 $redirect = getREQUEST("redirect");
 $format   = getREQUEST("format");
+$page     = getREQUEST("page", 1);
+$page     = intval($page);
+$page     = ($page === 0) ? 1 : $page;
 
 $f = new phpFlickr("2070c8ac214487572681a57a0b7d3e40", "67794c1d44a9fc7e");
 $f->setToken("72157631752899669-3729349dd1b76f08");
@@ -63,7 +66,7 @@ switch ($method)
         $data = $f->people_getPhotos("me", array(
             "extras"   => "url_c,url_m,url_o,tags,date_taken",
             "per_page" => 100,
-            "page"     => 1,
+            "page"     => $page,
         ));
         $photos = $data["photos"]["photo"];
         $result = json_encode($photos);
