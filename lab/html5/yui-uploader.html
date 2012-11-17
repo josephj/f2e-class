@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>YUI - Uploader</title>
+<link rel="stylesheet" href="uploader.css">
+</head>
+<body class="yui3-skin-sam">
+
+    <!-- 上傳表單模組 -->
+    <div id="upload-form">
+        <div class="bd">
+            <!-- 沒有 JavaScript 時就是單純的上傳表單 -->
+            <noscript>
+                <form method="post"
+                      action="uploader.php"
+                      enctype="multipart/form-data">
+                    <input type="file" name="file">
+                    <input type="submit" value="Upload">
+                </form>
+            </noscript>
+        </div>
+    </div>
+
+    <!-- 表格樣板 -->
+    <script id="template-uploader" type="text/x-handlebars-template">
+    <div class="uploader"></div>
+    <table class="file-data">
+        <thead>
+            <tr>
+                <th>檔案名稱</th>
+                <th>檔案大小</th>
+                <th>上傳進度</th>
+            </tr>
+            <tr class="empty">
+                <td colspan="3">目前尚未有檔案上傳</td>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    </script>
+
+    <!-- 表格項目樣板 -->
+    <script id="template-item" type="text/x-handlebars-template">
+    <tr id="{{id}}_row">
+        <td class="name">{{name}}</td>
+        <td class="size">{{size}}</td>
+        <td class="percent">此檔案尚未上傳</td>
+    </tr>
+    </script>
+
+    <script src="http://yui.yahooapis.com/3.7.2/build/yui/yui-min.js"></script>
+    <script src="uploader.js"></script>
+
+</body>
+</html>

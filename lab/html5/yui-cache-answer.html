@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>YUI JSONP</title>
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.5.1/build/cssreset/reset-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.5.1/build/cssfonts/fonts-min.css">
+<style type="text/css">
+#photo {
+    margin-bottom:10px;
+}
+#photo h2 {
+    margin-bottom:10px;
+    font-weight:bold;
+    font-size:123.1%;
+}
+#photo ul {
+    zoom:1;
+}
+#photo ul:after {
+    content:'';
+    display:block;
+    clear:both;
+}
+#photo li {
+    float:left;
+    margin:0 5px 5px 0;
+}
+</style>
+<script type="text/javascript" src="http://yui.yahooapis.com/3.7.3/build/yui/yui-min.js"></script>
+<script type="text/javascript">
+// 目標：這是先前 JSONP 的範例，多加了一個 cache 模組
+//       如果已經有記錄就不要再去跟 Flickr 索取資料
+YUI().use("cache", "jsonp", "event-base", "node-base", function (Y) {
+
+    var cache, callback, handleClick, _keyword;
+
+    // 步驟 1 : 利用 Y.CacheOffline 建立 Cache 的 Instance
+    cache = new Y.CacheOffline();
+
+    callback = function (data) {
+        var items    = data.photos.photo,
+            module   = Y.one("#photo"),
+            bodeNode = module.one(".bd"),
+            html = [];
+
+        html.push('<ul class="clearfix">');
+        Y.each(items, function (item) {
+            var src, link;
+            src  = [
+                "http://farm" + item.farm + ".static.flickr.com/",
+                item.server + "/",
+                item.id + "_" + item.secret +"_s.jpg"
+            ].join("");
+            link = "http://www.flickr.com/photos/" + item.owner + "/" + item.id;
+            html.push([
+                "<li>",
+                    '<a href="' + link + '" title="' + item.title + '">',
+                        '<img src="' + src + '">',
+                    "</a>",
+                "</li>"
+            ].join(""));
+        });
+        html.push("</ul>");
+        // 步驟 4 : 將資料存入 Cache 中、下一次就可以用啦！ cache.add(<keyword>, <value>);
+        cache.add(_keyword, html.join(""));
+        bodeNode.setContent(html.join(""));
+    };
+
+    handleClick = function (e) {
+        e.preventDefault();
+
+        var keyword,
+            data,
+            url;
+
+        keyword = Y.one("input").get("value");
+        _keyword = keyword;
+
+        // 步驟 2 - 以 cache.retrieve(keyword) 檢查此關鍵字是否有 Cache
+        data = cache.retrieve(keyword);
+        if (data) {
+            // 步驟 3 - 有的話就直接用 data.response 取得
+            Y.log("有 Cache 喔！");
+            Y.one("#photo").one(".bd").setContent(data.response);
+        } else {
+            // 沒有的話當然就是走舊的流程
+            Y.log("沒有 Cache 喔！");
+            url = [
+                "http://api.flickr.com/services/rest/?",
+                "method=flickr.photos.search&",
+                "api_key=d498ec869768ecea276a7cb3906241d9&",
+                "tags=" + encodeURIComponent(keyword) + "&",
+                "per_page=100&",
+                "sort=interestingness-desc&",
+                "format=json&",
+                "jsoncallback={callback}"
+            ].join("");
+            Y.jsonp(url, callback);
+        }
+    };
+
+    Y.one(".view-link").on("click", handleClick);
+});
+</script>
+</head>
+<body>
+    <!-- 這是一個顯示照片的模組，為了效能考量，我們決定點選後再載入照片 -->
+    <div id="photo">
+        <div class="hd">
+            <h2>相關照片</h2>
+        </div>
+        <div class="bd">
+            <input type="text" name="value" value="miiiCasa">
+            <!-- 點選以後要讀取資料，請針對 .view-link 綁上事件 -->
+            <a href="http://www.flickr.com/photos/tags/nctu/interesting/" class="view-link">觀看照片</a>
+        </div>
+    </div>
+</body>
+</html>

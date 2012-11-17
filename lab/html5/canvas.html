@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Canvas 範例 (YUI Graphic)</title>
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.2/build/cssreset/reset-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.2/build/cssfonts/fonts-min.css">
+<script type="text/javascript" src="http://yui.yahooapis.com/3.7.2/build/yui/yui-min.js"></script>
+<style type="text/css">
+#canvas {
+    width: 600px;
+    height: 400px;
+}
+</style>
+</head>
+<body>
+
+    <div id="canvas"><!-- 一塊空白的畫布 --></div>
+    <script>
+    YUI().use("graphics", function (Y) {
+        var graphic = new Y.Graphic();
+        graphic.render("#canvas");
+
+        // 參考 http://yuilibrary.com/yui/docs/graphics 的 Creating Shapes 建立一些形狀
+        // graphic.addShape({});
+
+    });
+    </script>
+</body>
+</html>

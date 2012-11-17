@@ -350,6 +350,56 @@ $data = array(
                 "class" => "slide-link",
                 "answer" => FALSE,
             ),
+            array(
+                "text" => "練習：用 Node.js 的 Hello World!",
+                "href" => "lab/nodejs/hello.js",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "練習：用 Node.js 建立 Web Server",
+                "href" => "lab/nodejs/http.js",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "練習：用 CommonJS 建立模組架構",
+                "href" => "lab/nodejs/commonjs.js",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "練習：用 CommonJS 建立模組架構 (引用模組)",
+                "href" => "lab/nodejs/commonjs-module.js",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "練習：讀取 HTML 網頁 (Node.js)",
+                "href" => "lab/nodejs/html.js",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "練習：讀取 HTML 網頁 (HTML)",
+                "href" => "lab/nodejs/html.html",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "練習：Polling 的作法",
+                "href" => "lab/nodejs/polling.html",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "練習：Polling 的作法 (PHP)",
+                "href" => "lab/nodejs/polling.phps",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "練習：Long Polling 的作法",
+                "href" => "lab/nodejs/long-polling.html",
+                "answer" => FALSE,
+            ),
+            array(
+                "text" => "練習：Long Polling 的作法 (Node.js)",
+                "href" => "lab/nodejs/long-polling.js",
+                "answer" => FALSE,
+            ),
         ),
     ),
     "html5" => array(
@@ -362,6 +412,19 @@ $data = array(
                 "href" => "#show-slide",
                 "class" => "slide-link",
                 "answer" => FALSE,
+            ),
+            array(
+                "text" => "練習：HTML5 Canvas (YUI Graphics)",
+                "href" => "lab/html5/canvas.html",
+            ),
+            array(
+                "text"   => "範例：HTML5 File (YUI Uploader)",
+                "href"   => "lab/html5/yui-uploader.html",
+                "answer" => FALSE,
+            ),
+            array(
+                "text"   => "範例：HTML5 Local Storage (YUI Cache)",
+                "href"   => "lab/html5/yui-cache.html",
             ),
         ),
     ),
