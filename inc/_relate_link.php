@@ -400,6 +400,11 @@ $data = array(
                 "href" => "lab/nodejs/long-polling.js",
                 "answer" => FALSE,
             ),
+            array(
+                "text" => "練習：用 Socket.io 製作的聊天室",
+                "href" => "https://github.com/ericraio/socket.io-chat-demo",
+                "answer" => FALSE,
+            ),
         ),
     ),
     "html5" => array(
