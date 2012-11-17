@@ -1,6 +1,6 @@
 [submodule "album"]
         path = album
-        url = git://github.com/f2eclass/album.git
+        url = git@github.com:f2eclass/album.git
 [submodule "minify"]
         path = minify
         url = git://github.com/mrclay/minify.git
