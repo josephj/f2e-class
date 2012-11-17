@@ -1,12 +1,12 @@
 [submodule "album"]
         path = album
-        url = git@github.com:f2eclass/album.git
+        url = git://github.com/f2eclass/album.git
 [submodule "minify"]
         path = minify
         url = git://github.com/mrclay/minify.git
 [submodule "mini"]
         path = mini
-        url = git@github.com:josephj/mini.git
+        url = git://github.com/josephj/mini.git
 [submodule "lab"]
-	path = lab
-	url = git@github.com:f2eclass/lab.git
+        path = lab
+        url = git://github.com/f2eclass/lab.git
