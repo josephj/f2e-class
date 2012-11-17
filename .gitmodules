@@ -7,3 +7,6 @@
 [submodule "mini"]
         path = mini
         url = git@github.com:josephj/mini.git
+[submodule "lab"]
+	path = lab
+	url = git@github.com:f2eclass/lab.git
