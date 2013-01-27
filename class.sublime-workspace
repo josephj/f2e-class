@@ -44,18 +44,10 @@
 	"buffers":
 	[
 		{
-			"file": "inc/_relate_link.php",
+			"file": "/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
 			"settings":
 			{
-				"buffer_size": 16082,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "lab/html5/canvas.html",
-			"settings":
-			{
-				"buffer_size": 1769,
+				"buffer_size": 571,
 				"line_ending": "Unix"
 			}
 		}
@@ -152,6 +144,11 @@
 	},
 	"file_history":
 	[
+		"/Users/joseph_chiang/class/lab/yui/preventdefault.html",
+		"/Users/joseph_chiang/class/lab/html5/histroy.html",
+		"/Users/joseph_chiang/class/lab/html5/yui-cache.html",
+		"/Users/joseph_chiang/class/lab/html5/canvas.html",
+		"/Users/joseph_chiang/class/inc/_relate_link.php",
 		"/Users/joseph_chiang/class/lab/extra/facebook.html",
 		"/Users/joseph_chiang/class/inc/_masthead.php",
 		"/Users/joseph_chiang/class/album/inc/._masthead.php.swp",
@@ -160,7 +157,6 @@
 		"/Users/joseph_chiang/class/lab/yui/panel-answer.html",
 		"/Users/joseph_chiang/class/lab/yui/handlebars-answer.html",
 		"/Users/joseph_chiang/class/lab/yui/panel.html",
-		"/Users/joseph_chiang/class/inc/_relate_link.php",
 		"/Users/joseph_chiang/class/lab/yui/node.html",
 		"/Users/joseph_chiang/class/lab/yui/node2.html",
 		"/Users/joseph_chiang/class/lab/yui/node-event.html",
@@ -295,23 +291,23 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "inc/_relate_link.php",
+					"file": "/Users/joseph_chiang/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
 					"settings":
 					{
-						"buffer_size": 16082,
+						"buffer_size": 571,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								13551,
-								13551
+								0,
+								0
 							]
 						],
 						"settings":
@@ -319,43 +315,11 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 8331.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "lab/html5/canvas.html",
-					"settings":
-					{
-						"buffer_size": 1769,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1396,
-								1396
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 628.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
