@@ -316,25 +316,25 @@ $data = array(
             ),
             array(
                 "text" => "外部 JavaScript 會阻塞內容呈現",
-                "href" => "/performance/blocking-javascript.html",
+                "href" => "lab/performance/blocking-javascript.html",
                 "answer" => FALSE,
             ),
             array(
                 "text" => "外部 JavaScript 會阻塞內容呈現 - 外部檔案內容",
-                "href" => "/performance/blocking-javascript.phps",
+                "href" => "lab/performance/blocking-javascript.phps",
                 "answer" => FALSE,
             ),
             array(
                 "text" => "練習：非堵塞 JavaScript 的作法",
-                "href" => "/performance/non-blocking-javascript.html",
+                "href" => "lab/performance/non-blocking-javascript.html",
             ),
             array(
                 "text" => "練習：用 Y.ImageLoader 延遲圖片載入",
-                "href" => "lab/yui/imageloader.phps",
+                "href" => "lab/performance/imageloader.phps",
             ),
             array(
                 "text" => "測試用 JavaScript 與 CSS 下載",
-                "href" => "/performace/files.zip",
+                "href" => "lab/performance/files.zip",
                 "answer" => FALSE,
             ),
         ),
