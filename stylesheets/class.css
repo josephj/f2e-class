@@ -1,7 +1,7 @@
 /* line 1, ../sass/_masthead.scss */
 #masthead {
     padding: 12px 20px;
-    background: #31033e url(/assets/bg_masthead.png) 100% 0 no-repeat;
+    background: #31033e;
 }
 /* line 4, ../sass/_masthead.scss */
 #masthead .title a {
